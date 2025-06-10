@@ -8,12 +8,12 @@ const DsuUniversity = () => {
     location: "Chennai, Tamil Nadu",
     tagline: "We built a better online through quality education",
     heroImage: "https://images.unsplash.com/photo-1562774053-701939374585?w=1200&q=80",
+    logoImage: "https://images.unsplash.com/photo-1607013251379-e6eecfffe234?w=100&q=80",
     primaryColor: "text-emerald-600",
     gradientColors: "from-emerald-600 to-emerald-800",
     established: "2019",
     students: "15,000+",
     about: "Dhanalakshmi Srinivasan University (DSU), established in 2019, is a proud initiative of the Dhanalakshmi Srinivasan Charitable and Educational Trust, founded by Dr. A. Srinivasan. With campuses in Samayapuram (Tiruchirappalli) and Perambalur, DSU brings together quality education and modern infrastructure under one roof. It's part of a well-known group that runs several colleges across Tamil Nadu in fields like medicine, engineering, agriculture, and pharmacy. Built with a vision to empower students through innovation and research, the university is approved by top bodies like AICTE, NMC, PCI, INC, and UGC, making it a trusted name in higher education.",
-    link: "https://www.dsuniversity.ac.in/",
     features: [
       {
         icon: Award,

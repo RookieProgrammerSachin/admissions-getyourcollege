@@ -8,12 +8,12 @@ const SaveethaUniversity = () => {
     location: "Chennai, Tamil Nadu",
     tagline: "We built a better online through quality education",
     heroImage: "https://images.unsplash.com/photo-1564981797816-1043664bf78d?w=1200&q=80",
+    logoImage: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=100&q=80",
     primaryColor: "text-red-600",
     gradientColors: "from-red-600 to-red-800",
     established: "1986",
     students: "15,000+",
     about: "The Saveetha Medical and Educational Trust was created in 1986 mainly to provide medical relief, to promote Education and encourage Research. The Trust started a Saveetha Dental College and established an attached General Hospital in the year 1988. Subsequently the Trust established a Nursing College, Physiotherapy College, Occupational Therapy College and an Engineering College in order to comply with our commitment and to serve the people, especially those living in Rural Village in and around Chennai and adjoining districts of Tamilnadu. To fulfil the norms of the University Grants Commission, for the purpose of obtaining 'Deemed to be University' status, Saveetha Medical and Educational Trust has sponsored another Trust (viz.) Saveetha Institute of Medical & Technical Sciences (SIMATS) in the year 2001.",
-    link: "https://www.saveetha.com/aboutus",
     features: [
       {
         icon: Award,

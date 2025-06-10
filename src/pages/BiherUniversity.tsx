@@ -8,12 +8,12 @@ const BiherUniversity = () => {
     location: "Chennai, Tamil Nadu",
     tagline: "We built a better online through quality education",
     heroImage: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&q=80",
+    logoImage: "https://images.unsplash.com/photo-1564981797816-1043664bf78d?w=100&q=80",
     primaryColor: "text-purple-600",
     gradientColors: "from-purple-600 to-purple-800",
     established: "1984",
     students: "20,000+",
     about: "Bharath Institute of Higher Education and Research (BIHER), formerly known as Bharath University, was founded in 1984 by Dr. S. Jagathrakshakan under the Sri Lakshmi Ammal Educational Trust. Located in Chennai, Tamil Nadu, the university was granted deemed-to-be status in 2002. Spread across a 305-acre urban campus, BIHER offers a wide range of programs in engineering, medicine, dentistry, law, management, and sciences. Known for its commitment to excellence in education and research, the university holds an NAAC 'A' grade accreditation. With modern infrastructure and a focus on innovation, Bharath University continues to shape skilled professionals across various fields.",
-    link: "https://admissions.bharathuniv.ac.in/",
     features: [
       {
         icon: Award,

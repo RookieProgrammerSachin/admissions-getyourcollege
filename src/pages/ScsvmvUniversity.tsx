@@ -8,12 +8,12 @@ const ScsvmvUniversity = () => {
     location: "Chennai, Tamil Nadu",
     tagline: "We built a better online through quality education",
     heroImage: "https://images.unsplash.com/photo-1523050854058-8df90110c9d1?w=1200&q=80",
+    logoImage: "https://images.unsplash.com/photo-1605106715994-18d3fecffb98?w=100&q=80",
     primaryColor: "text-orange-600",
     gradientColors: "from-orange-600 to-orange-800",
     established: "1993",
     students: "12,000+",
     about: "Sri Chandrasekharendra Saraswathi Viswa Mahavidyalaya (SCSVMV), located in Enathur, Kanchipuram, was established in 1993 with the blessings of the revered saints of the Kanchi Kamakoti Peetham. Named after Jagadguru Chandrasekharendra Saraswathi Swamigal, the university beautifully blends traditional Indian values with modern education. Spread over a peaceful 50-acre campus, SCSVMV offers programs in Engineering, Management, Science, Sanskrit, Indian Culture, and Health Sciences. Recognized by UGC, AICTE, and accredited with a NAAC 'A' grade, the university focuses on holistic development through academics, research, and values. It provides a nurturing environment for students to grow intellectually and spiritually.",
-    link: "https://kanchiuniv.ac.in/admission-2025-26/",
     features: [
       {
         icon: Award,
