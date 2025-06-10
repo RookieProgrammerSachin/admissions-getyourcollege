@@ -170,7 +170,7 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
                   </div>
                 )}
                 <div>
-                  <div className="font-bold text-gray-900 text-xl">{universityData.name.split(' ').slice(0, 3).join(' ')}</div>
+                  <div className="font-bold text-gray-900 text-xl">{universityData.name.split(' ').slice(0, 12).join(' ')}</div>
                   <div className="text-sm text-gray-600 flex items-center">
                     <Building className="w-3 h-3 mr-1" />
                     {universityData.location}
