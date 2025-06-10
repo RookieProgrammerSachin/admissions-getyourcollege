@@ -1,48 +1,54 @@
 
 import UniversityLayout from "@/components/UniversityLayout";
-import { Award, Users, Building, BookOpen, GraduationCap, Globe, Heart, Star } from "lucide-react";
+import { Award, Users, Building, Handshake } from "lucide-react";
 
 const ScsvmvUniversity = () => {
   const universityData = {
     name: "Sri Chandrasekharendra Saraswathi Viswa Mahavidyalaya",
     location: "Chennai, Tamil Nadu",
-    heroImage: "https://images.unsplash.com/photo-1523050854058-8df90110c9d1",
-    primaryColor: "text-orange-600", 
+    tagline: "We built a better online through quality education",
+    heroImage: "https://images.unsplash.com/photo-1523050854058-8df90110c9d1?w=1200&q=80",
+    primaryColor: "text-orange-600",
     gradientColors: "from-orange-600 to-orange-800",
     established: "1993",
     students: "12,000+",
-    about: "Sri Chandrasekharendra Saraswathi Viswa Mahavidyalaya (SCSVMV) is a unique institution that seamlessly blends traditional Indian values with modern educational methodologies. Named after the revered Kanchi Paramacharya, our university is committed to holistic education that nurtures both intellectual and spiritual growth. We offer a comprehensive range of programs across various disciplines while maintaining our commitment to cultural heritage and ethical values. Our approach to education emphasizes character building alongside academic excellence.",
+    about: "Sri Chandrasekharendra Saraswathi Viswa Mahavidyalaya (SCSVMV), located in Enathur, Kanchipuram, was established in 1993 with the blessings of the revered saints of the Kanchi Kamakoti Peetham. Named after Jagadguru Chandrasekharendra Saraswathi Swamigal, the university beautifully blends traditional Indian values with modern education. Spread over a peaceful 50-acre campus, SCSVMV offers programs in Engineering, Management, Science, Sanskrit, Indian Culture, and Health Sciences. Recognized by UGC, AICTE, and accredited with a NAAC 'A' grade, the university focuses on holistic development through academics, research, and values. It provides a nurturing environment for students to grow intellectually and spiritually.",
+    link: "https://kanchiuniv.ac.in/admission-2025-26/",
     features: [
       {
         icon: Award,
-        title: "UGC Recognition",
-        description: "Deemed university with strong academic reputation and recognition"
+        title: "Approvals",
+        description: "Recognized by UGC, AICTE, NAAC 'A' grade accredited.",
+        color: "bg-blue-100"
       },
       {
         icon: Building,
-        title: "Heritage Campus",
-        description: "Beautiful campus that combines traditional architecture with modern facilities"
+        title: "Campus",
+        description: "Serene 50-acre campus conducive to holistic growth.",
+        color: "bg-green-100"
       },
       {
         icon: Users,
-        title: "Holistic Faculty",
-        description: "Experienced faculty committed to value-based education"
+        title: "Faculties",
+        description: "Distinguished faculty integrating traditional and contemporary educational methods.",
+        color: "bg-orange-100"
       },
       {
-        icon: Heart,
-        title: "Value Education",
-        description: "Emphasis on character building and moral development"
+        icon: Handshake,
+        title: "Collaborations",
+        description: "Extensive collaborations in academics, cultural programs, and spiritual initiatives.",
+        color: "bg-red-100"
       }
     ],
     courses: [
-      { title: "Arts & Humanities", duration: "3 Years", category: "Liberal Arts" },
-      { title: "Commerce", duration: "3 Years", category: "Business" },
-      { title: "Science", duration: "3 Years", category: "Natural Sciences" },
-      { title: "Engineering", duration: "4 Years", category: "Technology" },
-      { title: "Management", duration: "2 Years", category: "Business Administration" },
-      { title: "Education", duration: "2 Years", category: "Teaching" },
-      { title: "Sanskrit Studies", duration: "3 Years", category: "Classical Studies" },
-      { title: "Social Work", duration: "2 Years", category: "Social Sciences" }
+      { title: "Ayurveda (Medical Sciences)" },
+      { title: "Engineering & Technology" },
+      { title: "Physiotherapy" },
+      { title: "Arts & Humanities (English, Tamil, Sanskrit)" },
+      { title: "Management Studies" },
+      { title: "Education (B.Ed)" },
+      { title: "Indian Culture & Philosophy" },
+      { title: "Research (M.Phil & Ph.D.)" }
     ]
   };
 

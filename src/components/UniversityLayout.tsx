@@ -8,24 +8,27 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { Building, Users, Award, BookOpen, ArrowLeft, Mail, Phone, User } from "lucide-react";
+import { Building, Users, Award, BookOpen, ArrowLeft, Mail, Phone } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
 interface Course {
   title: string;
-  duration: string;
-  category: string;
+  duration?: string;
+  category?: string;
+  image?: string;
 }
 
 interface Feature {
   icon: React.ComponentType<{ className?: string }>;
   title: string;
   description: string;
+  color?: string;
 }
 
 interface UniversityData {
   name: string;
   location: string;
+  tagline: string;
   heroImage: string;
   primaryColor: string;
   gradientColors: string;
@@ -34,6 +37,7 @@ interface UniversityData {
   courses: Course[];
   established: string;
   students: string;
+  link?: string;
 }
 
 interface UniversityLayoutProps {
@@ -67,123 +71,136 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
       <header className="bg-white shadow-sm border-b sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
-            <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
-              <ArrowLeft className="h-5 w-5" />
-              <Building className="h-8 w-8 text-blue-600" />
-              <span className="text-xl font-bold text-gray-900">Back to Universities</span>
-            </Link>
+            <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-2">
+                <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">S</span>
+                </div>
+                <div>
+                  <div className="font-bold text-gray-900">{universityData.name.split(' ').slice(0, 2).join(' ')}</div>
+                  <div className="text-sm text-gray-600">{universityData.location}</div>
+                </div>
+              </div>
+            </div>
             <div className="text-sm text-gray-600">sairamtechincubator.in</div>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className={`relative py-32 bg-gradient-to-r ${universityData.gradientColors} overflow-hidden`}>
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
-            {universityData.name}
-          </h1>
-          <p className="text-xl md:text-2xl mb-4 animate-fade-in">
-            {universityData.location}
-          </p>
-          <p className="text-lg mb-12 max-w-3xl mx-auto animate-fade-in">
-            Empowering minds, shaping futures - Join us in our journey of academic excellence and innovation.
-          </p>
-          
-          <Dialog open={isOpen} onOpenChange={setIsOpen}>
-            <DialogTrigger asChild>
-              <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100 text-lg px-8 py-4 animate-fade-in hover:scale-105 transition-transform">
-                Register Now
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="sm:max-w-md">
-              <DialogHeader>
-                <DialogTitle>Register for {universityData.name}</DialogTitle>
-                <DialogDescription>
-                  Fill out the form below and we'll get back to you with more information.
-                </DialogDescription>
-              </DialogHeader>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <Label htmlFor="name">Full Name</Label>
-                  <Input
-                    id="name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    required
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
-                    required
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="phone">Phone Number</Label>
-                  <Input
-                    id="phone"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                    required
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="course">Course Interest</Label>
-                  <Select value={formData.course} onValueChange={(value) => setFormData({...formData, course: value})}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select a course" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {universityData.courses.slice(0, 6).map((course) => (
-                        <SelectItem key={course.title} value={course.title}>
-                          {course.title}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div>
-                  <Label htmlFor="message">Additional Message (Optional)</Label>
-                  <Textarea
-                    id="message"
-                    value={formData.message}
-                    onChange={(e) => setFormData({...formData, message: e.target.value})}
-                    placeholder="Tell us more about your interests..."
-                  />
-                </div>
-                <Button type="submit" className="w-full">
-                  Submit Registration
+      <section 
+        className="relative py-32 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${universityData.heroImage})`
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              {universityData.name}
+            </h1>
+            <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed">
+              {universityData.tagline}
+            </p>
+            
+            <Dialog open={isOpen} onOpenChange={setIsOpen}>
+              <DialogTrigger asChild>
+                <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100 text-lg px-8 py-4 rounded-full font-semibold">
+                  Contact Us
                 </Button>
-              </form>
-            </DialogContent>
-          </Dialog>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-md">
+                <DialogHeader>
+                  <DialogTitle>Contact {universityData.name}</DialogTitle>
+                  <DialogDescription>
+                    Fill out the form below and we'll get back to you with more information.
+                  </DialogDescription>
+                </DialogHeader>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div>
+                    <Label htmlFor="name">Full Name</Label>
+                    <Input
+                      id="name"
+                      value={formData.name}
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      required
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="email">Email</Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      required
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="phone">Phone Number</Label>
+                    <Input
+                      id="phone"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                      required
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="course">Course Interest</Label>
+                    <Select value={formData.course} onValueChange={(value) => setFormData({...formData, course: value})}>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select a course" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {universityData.courses.slice(0, 8).map((course, index) => (
+                          <SelectItem key={index} value={course.title}>
+                            {course.title}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  <div>
+                    <Label htmlFor="message">Additional Message (Optional)</Label>
+                    <Textarea
+                      id="message"
+                      value={formData.message}
+                      onChange={(e) => setFormData({...formData, message: e.target.value})}
+                      placeholder="Tell us more about your interests..."
+                    />
+                  </div>
+                  <Button type="submit" className="w-full">
+                    Submit Registration
+                  </Button>
+                </form>
+              </DialogContent>
+            </Dialog>
+          </div>
         </div>
       </section>
 
-      {/* Why Choose Section */}
+      {/* Why Choose Us Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
-            Why Choose {universityData.name}?
-          </h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
+              Why Choose Us
+            </h2>
+            <div className="w-20 h-1 bg-yellow-500 mx-auto mb-6"></div>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              We are committed to providing quality education and fostering innovation and research excellence.
+            </p>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {universityData.features.map((feature, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow animate-fade-in">
-                <CardHeader>
-                  <feature.icon className={`h-12 w-12 mx-auto mb-4 ${universityData.primaryColor}`} />
-                  <CardTitle className="text-xl">{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600">{feature.description}</p>
-                </CardContent>
-              </Card>
+              <div key={index} className="text-center">
+                <div className={`w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center ${feature.color || 'bg-blue-100'}`}>
+                  <feature.icon className={`h-8 w-8 ${index === 0 ? 'text-blue-600' : index === 1 ? 'text-green-600' : index === 2 ? 'text-orange-600' : 'text-red-600'}`} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -192,27 +209,31 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
       {/* Programmes Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
-            Programmes Offered
-          </h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
+              Programmes Offered
+            </h2>
+            <div className="w-20 h-1 bg-yellow-500 mx-auto mb-6"></div>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Advance your career by choosing the course that interests you the most
+            </p>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {universityData.courses.map((course, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in">
-                <CardHeader>
-                  <div className={`h-32 bg-gradient-to-r ${universityData.gradientColors} rounded-lg mb-4 flex items-center justify-center`}>
-                    <BookOpen className="h-12 w-12 text-white" />
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                <div className="h-48 bg-gradient-to-br from-gray-800 to-gray-900 relative overflow-hidden">
+                  {course.image ? (
+                    <img src={course.image} alt={course.title} className="w-full h-full object-cover" />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <BookOpen className="h-16 w-16 text-white opacity-80" />
+                    </div>
+                  )}
+                  <div className="absolute inset-0 bg-black bg-opacity-40 flex items-end">
+                    <h3 className="text-white font-bold text-lg p-4">{course.title}</h3>
                   </div>
-                  <CardTitle className="text-lg">{course.title}</CardTitle>
-                  <CardDescription>
-                    {course.duration} • {course.category}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button variant="outline" className="w-full hover:scale-105 transition-transform">
-                    Learn More
-                  </Button>
-                </CardContent>
+                </div>
               </Card>
             ))}
           </div>
@@ -220,31 +241,32 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-gray-50">
+      <section 
+        className="py-20 bg-cover bg-center bg-no-repeat relative"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1562774053-701939374585?w=1200&q=80')`
+        }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-8">
-                About {universityData.name}
-              </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+          <div className="max-w-4xl">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+              About {universityData.name.split(' ').slice(-2).join(' ')}
+            </h2>
+            <div className="prose prose-lg text-white max-w-none">
+              <p className="text-lg leading-relaxed mb-6">
                 {universityData.about}
               </p>
-              
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-gray-900">{universityData.established}</div>
-                  <div className="text-gray-600">Established</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-gray-900">{universityData.students}</div>
-                  <div className="text-gray-600">Students</div>
-                </div>
-              </div>
             </div>
             
-            <div className={`h-96 bg-gradient-to-r ${universityData.gradientColors} rounded-xl flex items-center justify-center`}>
-              <Building className="h-32 w-32 text-white opacity-80" />
+            <div className="grid grid-cols-2 gap-8 mt-12">
+              <div>
+                <div className="text-4xl font-bold text-white mb-2">{universityData.established}</div>
+                <div className="text-gray-300">Established</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-white mb-2">{universityData.students}</div>
+                <div className="text-gray-300">Students</div>
+              </div>
             </div>
           </div>
         </div>
@@ -259,17 +281,16 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
               <p className="text-gray-400 mb-4">
                 Excellence in education, innovation in research, and commitment to student success.
               </p>
-              <div className="flex space-x-4">
-                <Button variant="outline" size="sm" className="text-gray-400 border-gray-600 hover:text-white hover:border-white">
-                  Facebook
-                </Button>
-                <Button variant="outline" size="sm" className="text-gray-400 border-gray-600 hover:text-white hover:border-white">
-                  Twitter
-                </Button>
-                <Button variant="outline" size="sm" className="text-gray-400 border-gray-600 hover:text-white hover:border-white">
-                  LinkedIn
-                </Button>
-              </div>
+              {universityData.link && (
+                <a 
+                  href={universityData.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:text-blue-300 transition-colors"
+                >
+                  Visit Official Website →
+                </a>
+              )}
             </div>
             
             <div>

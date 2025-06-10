@@ -1,48 +1,58 @@
 
 import UniversityLayout from "@/components/UniversityLayout";
-import { Award, Users, Building, BookOpen, Microscope, Heart, Brain, Pill } from "lucide-react";
+import { Award, Users, Building, Handshake } from "lucide-react";
 
 const MgrUniversity = () => {
   const universityData = {
-    name: "Dr. M.G.R. Educational and Research Institute",
+    name: "Tamil Nadu Dr. M.G.R. Medical University",
     location: "Chennai, Tamil Nadu",
-    heroImage: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f",
+    tagline: "We built a better online through quality education",
+    heroImage: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=1200&q=80",
     primaryColor: "text-blue-600",
     gradientColors: "from-blue-600 to-blue-800",
     established: "1988",
     students: "25,000+",
-    about: "Dr. M.G.R. Educational and Research Institute stands as a beacon of excellence in medical and health sciences education. With over three decades of commitment to academic excellence, we have been at the forefront of medical education and research. Our institution is renowned for producing competent healthcare professionals who serve society with dedication and expertise. We combine traditional values with modern educational methodologies to create a learning environment that nurtures both professional competence and ethical values.",
+    about: "Established in 1988 by the Tmt.Kannammal Educational Trust, Dr. M.G.R. Educational and Research Institute attained deemed university status in 2003. The university emphasizes technical proficiency, confidence-building, and holistic development to prepare students for global challenges. Recognized by the University Grants Commission (UGC) and the Ministry of Human Resources Development (MHRD), it offers diverse academic programs in engineering, medical sciences, dental studies, and other disciplines, fostering a research-oriented and innovation-driven educational environment.",
+    link: "https://www.drmgrdu.ac.in/index.php",
     features: [
       {
         icon: Award,
-        title: "UGC Recognition",
-        description: "Fully recognized by UGC and accredited by NAAC with 'A' grade"
+        title: "Approvals",
+        description: "Recognized by UGC, Medical Council of India, Pharmacy Council.",
+        color: "bg-blue-100"
       },
       {
         icon: Building,
-        title: "Modern Campus",
-        description: "State-of-the-art facilities with advanced medical equipment"
+        title: "Campus",
+        description: "Central location in Chennai, equipped with modern facilities.",
+        color: "bg-green-100"
       },
       {
         icon: Users,
-        title: "Expert Faculty",
-        description: "Highly qualified faculty with extensive clinical experience"
+        title: "Faculties",
+        description: "Experienced healthcare educators with extensive practical knowledge.",
+        color: "bg-orange-100"
       },
       {
-        icon: Heart,
-        title: "Hospital Network",
-        description: "Associated with leading hospitals for practical training"
+        icon: Handshake,
+        title: "Collaborations",
+        description: "Strong ties with leading hospitals and healthcare institutions.",
+        color: "bg-red-100"
       }
     ],
     courses: [
-      { title: "MBBS", duration: "5.5 Years", category: "Medical" },
-      { title: "BDS", duration: "5 Years", category: "Dental" },
-      { title: "B.Pharm", duration: "4 Years", category: "Pharmacy" },
-      { title: "Nursing", duration: "4 Years", category: "Healthcare" },
-      { title: "Physiotherapy", duration: "4.5 Years", category: "Allied Health" },
-      { title: "Medical Lab Technology", duration: "3 Years", category: "Diagnostic" },
-      { title: "Hospital Management", duration: "2 Years", category: "Administration" },
-      { title: "Public Health", duration: "2 Years", category: "Community Health" }
+      { title: "Medical" },
+      { title: "Dental" },
+      { title: "Health Science" },
+      { title: "Engineering & Technology" },
+      { title: "Law" },
+      { title: "Paramedical" },
+      { title: "Pharmacy" },
+      { title: "Nursing" },
+      { title: "Agriculture" },
+      { title: "Arts & Science" },
+      { title: "Management" },
+      { title: "Architecture" }
     ]
   };
 

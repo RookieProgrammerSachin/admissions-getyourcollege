@@ -1,48 +1,54 @@
 
 import UniversityLayout from "@/components/UniversityLayout";
-import { Award, Users, Building, BookOpen, Code, Cpu, Wifi, Smartphone } from "lucide-react";
+import { Award, Users, Building, Handshake } from "lucide-react";
 
 const DsuUniversity = () => {
   const universityData = {
-    name: "Dayananda Sagar University",
+    name: "Dhanalakshmi Srinivasan University",
     location: "Chennai, Tamil Nadu",
-    heroImage: "https://images.unsplash.com/photo-1562774053-701939374585",
+    tagline: "We built a better online through quality education",
+    heroImage: "https://images.unsplash.com/photo-1562774053-701939374585?w=1200&q=80",
     primaryColor: "text-emerald-600",
     gradientColors: "from-emerald-600 to-emerald-800",
-    established: "2014",
+    established: "2019",
     students: "15,000+",
-    about: "Dayananda Sagar University is a leading private university committed to excellence in engineering, technology, and innovation. We foster a culture of research and development while providing industry-relevant education. Our focus on practical learning, combined with strong industry partnerships, ensures our graduates are well-prepared for the challenges of the modern technological landscape. We emphasize entrepreneurship and innovation, encouraging students to become job creators rather than job seekers.",
+    about: "Dhanalakshmi Srinivasan University (DSU), established in 2019, is a proud initiative of the Dhanalakshmi Srinivasan Charitable and Educational Trust, founded by Dr. A. Srinivasan. With campuses in Samayapuram (Tiruchirappalli) and Perambalur, DSU brings together quality education and modern infrastructure under one roof. It's part of a well-known group that runs several colleges across Tamil Nadu in fields like medicine, engineering, agriculture, and pharmacy. Built with a vision to empower students through innovation and research, the university is approved by top bodies like AICTE, NMC, PCI, INC, and UGC, making it a trusted name in higher education.",
+    link: "https://www.dsuniversity.ac.in/",
     features: [
       {
         icon: Award,
-        title: "AICTE Approved",
-        description: "All engineering programs approved by AICTE and affiliations"
+        title: "Approvals",
+        description: "Approved by AICTE, NMC, PCI, INC, and UGC.",
+        color: "bg-blue-100"
       },
       {
         icon: Building,
-        title: "Tech Campus",
-        description: "Modern laboratories and research facilities for innovation"
+        title: "Campus",
+        description: "Modern campuses in Samayapuram and Perambalur with advanced infrastructure.",
+        color: "bg-green-100"
       },
       {
         icon: Users,
-        title: "Industry Experts",
-        description: "Faculty with strong industry background and research expertise"
+        title: "Faculties",
+        description: "Highly qualified, experienced educators promoting research and innovation.",
+        color: "bg-orange-100"
       },
       {
-        icon: Wifi,
-        title: "Smart Campus",
-        description: "Digital learning environment with latest technology integration"
+        icon: Handshake,
+        title: "Collaborations",
+        description: "Robust industry-academic partnerships enhancing practical experience.",
+        color: "bg-red-100"
       }
     ],
     courses: [
-      { title: "Computer Science Engineering", duration: "4 Years", category: "Engineering" },
-      { title: "Artificial Intelligence", duration: "4 Years", category: "Technology" },
-      { title: "Data Science", duration: "4 Years", category: "Analytics" },
-      { title: "Cybersecurity", duration: "4 Years", category: "Security" },
-      { title: "Robotics Engineering", duration: "4 Years", category: "Automation" },
-      { title: "Software Engineering", duration: "4 Years", category: "Development" },
-      { title: "Machine Learning", duration: "2 Years", category: "Research" },
-      { title: "Blockchain Technology", duration: "1 Year", category: "Certification" }
+      { title: "Medical & Health Sciences" },
+      { title: "Engineering & Technology" },
+      { title: "Law" },
+      { title: "Physiotherapy" },
+      { title: "Pharmacy" },
+      { title: "Agriculture" },
+      { title: "Design" },
+      { title: "Management" }
     ]
   };
 

@@ -1,48 +1,55 @@
 
 import UniversityLayout from "@/components/UniversityLayout";
-import { Award, Users, Building, BookOpen, Stethoscope, Gavel, Calculator, Palette } from "lucide-react";
+import { Award, Users, Building, Handshake } from "lucide-react";
 
 const SaveethaUniversity = () => {
   const universityData = {
     name: "Saveetha Institute of Medical and Technical Sciences",
     location: "Chennai, Tamil Nadu",
-    heroImage: "https://images.unsplash.com/photo-1564981797816-1043664bf78d",
+    tagline: "We built a better online through quality education",
+    heroImage: "https://images.unsplash.com/photo-1564981797816-1043664bf78d?w=1200&q=80",
     primaryColor: "text-red-600",
-    gradientColors: "from-red-600 to-red-800", 
-    established: "2005",
-    students: "18,000+",
-    about: "Saveetha Institute of Medical and Technical Sciences (SIMATS) is a multidisciplinary university offering comprehensive education across medical, dental, engineering, and management disciplines. Our institution is committed to providing quality education that meets international standards while remaining accessible to students from diverse backgrounds. We focus on practical learning, research, and community service, ensuring our graduates are well-equipped to meet the challenges of their chosen professions and contribute meaningfully to society.",
+    gradientColors: "from-red-600 to-red-800",
+    established: "1986",
+    students: "15,000+",
+    about: "The Saveetha Medical and Educational Trust was created in 1986 mainly to provide medical relief, to promote Education and encourage Research. The Trust started a Saveetha Dental College and established an attached General Hospital in the year 1988. Subsequently the Trust established a Nursing College, Physiotherapy College, Occupational Therapy College and an Engineering College in order to comply with our commitment and to serve the people, especially those living in Rural Village in and around Chennai and adjoining districts of Tamilnadu. To fulfil the norms of the University Grants Commission, for the purpose of obtaining 'Deemed to be University' status, Saveetha Medical and Educational Trust has sponsored another Trust (viz.) Saveetha Institute of Medical & Technical Sciences (SIMATS) in the year 2001.",
+    link: "https://www.saveetha.com/aboutus",
     features: [
       {
         icon: Award,
-        title: "NAAC Accredited",
-        description: "Accredited by NAAC with excellent academic standards"
+        title: "Approvals",
+        description: "UGC deemed, NAAC 'A++', AICTE, INC, Nursing Council, BCI approvals",
+        color: "bg-blue-100"
       },
       {
         icon: Building,
-        title: "Multi-Campus",
-        description: "Multiple specialized campuses with modern infrastructure"
+        title: "Campus",
+        description: "245+ acres, 60+ lakh sq.ft build; 15k students, 5k faculty",
+        color: "bg-green-100"
       },
       {
         icon: Users,
-        title: "Diverse Faculty",
-        description: "Multidisciplinary faculty with extensive academic and industry experience"
+        title: "Faculties",
+        description: "1,100+ PhD faculty, 1:9 student faculty ratio",
+        color: "bg-orange-100"
       },
       {
-        icon: Stethoscope,
-        title: "Clinical Training",
-        description: "Extensive clinical and practical training opportunities"
+        icon: Handshake,
+        title: "Collaborations",
+        description: "300 + MOUs, IPR cells, incubators, global industrial partnerships",
+        color: "bg-red-100"
       }
     ],
     courses: [
-      { title: "MBBS", duration: "5.5 Years", category: "Medical" },
-      { title: "BDS", duration: "5 Years", category: "Dental" },
-      { title: "Engineering", duration: "4 Years", category: "Technology" },
-      { title: "Pharmacy", duration: "4 Years", category: "Healthcare" },
-      { title: "MBA", duration: "2 Years", category: "Management" },
-      { title: "Law", duration: "5 Years", category: "Legal Studies" },
-      { title: "Architecture", duration: "5 Years", category: "Design" },
-      { title: "Paramedical Sciences", duration: "3 Years", category: "Allied Health" }
+      { title: "Medical" },
+      { title: "Dental Sciences" },
+      { title: "Engineering & Technology" },
+      { title: "Law" },
+      { title: "Physiotherapy" },
+      { title: "Nursing" },
+      { title: "Allied Health Sciences" },
+      { title: "Management" },
+      { title: "Architecture" }
     ]
   };
 
