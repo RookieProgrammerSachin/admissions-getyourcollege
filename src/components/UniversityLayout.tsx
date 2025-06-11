@@ -783,4 +783,4 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
 
 export default UniversityLayout;
 
-}
+

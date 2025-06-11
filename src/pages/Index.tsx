@@ -36,24 +36,24 @@ const Index = () => {
       path: "/scsvmv-university",
       description: "Comprehensive education and development",
       color: "from-orange-600 to-orange-800",
-      image: "https://kanchiuniv.ac.in/wp-content/uploads/2023/07/SCSVMV-University-logo.png",
-      heroImage: "https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80"
+      image: "https://upload.wikimedia.org/wikipedia/en/4/4c/Sri_Chandrasekharendra_Saraswathi_Viswa_Mahavidyalaya_logo.png",
+      heroImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDvOBmLRcAe4nPBYeVosAKtyty4x5aqLc9Fg&s"
     },
     {
       name: "Saveetha University",
       path: "/saveetha-university",
       description: "Multidisciplinary academic excellence",
       color: "from-red-600 to-red-800",
-      image: "https://www.saveetha.com/images/logo_white.png",
-      heroImage: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?w=800&q=80"
+      image:  "https://upload.wikimedia.org/wikipedia/en/2/21/Saveetha_Institute_of_Medical_And_Technical_Sciences_Logo.png",
+      heroImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVs0OjZjdMSOK_D8q6stw6rjfOPdnb02C7Kw&s"
     },
     {
       name: "Takshashila University",
       path: "/takshashila-university",
       description: "Reviving India's ancient educational excellence",
       color: "from-amber-600 to-amber-800",
-      image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400&q=80",
-      heroImage: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80"
+      image: "https://media.licdn.com/dms/image/v2/C4D0BAQEn2ipthDvaeA/company-logo_200_200/company-logo_200_200/0/1657190027778?e=1755129600&v=beta&t=_Wq4kB0kNAdBl3n1gMC2LupsgXRrzgfc60qQAT8TDcg",
+      heroImage:"https://takshashilauniv.ac.in/wp-content/uploads/2025/03/infrastructure-2.webp"
     }
   ];
 
