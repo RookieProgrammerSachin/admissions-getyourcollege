@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { Building, Users, Award, BookOpen, X, ChevronRight, Star, Clock, Users2 } from "lucide-react";
+import { Building, Users, Award, BookOpen, X, ChevronRight, Star, Clock, Users2, User, Phone, MapPin, GraduationCap } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
 interface Course {
@@ -32,7 +32,7 @@ interface Feature {
 interface UniversityData {
   name: string;
   location: string;
-  tagline: string;
+  tagline?: string;
   heroImage: string;
   logoImage?: string;
   primaryColor: string;
@@ -90,13 +90,19 @@ const getCourseImage = (courseTitle: string): string => {
     return 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&q=80';
   }
   if (title.includes('ayurveda')) {
-    return 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80';
+    return 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=400&q=80';
   }
   if (title.includes('education')) {
     return 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&q=80';
   }
   if (title.includes('paramedical')) {
     return 'https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=400&q=80';
+  }
+  if (title.includes('hotel')) {
+    return 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80';
+  }
+  if (title.includes('business')) {
+    return 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&q=80';
   }
   
   // Default image for other courses
@@ -111,9 +117,23 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
     course: "",
     message: ""
   });
+  const [enquiryForm, setEnquiryForm] = useState({
+    name: "",
+    phone: "",
+    state: "",
+    program: ""
+  });
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [isCourseDetailOpen, setIsCourseDetailOpen] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
+
+  const states = [
+    "Tamil Nadu", "Karnataka", "Kerala", "Andhra Pradesh", "Telangana", "Maharashtra", "Gujarat", "Rajasthan", "Delhi", "Uttar Pradesh", "West Bengal", "Punjab", "Haryana", "Madhya Pradesh", "Bihar", "Odisha", "Assam", "Jharkhand", "Chhattisgarh", "Himachal Pradesh", "Uttarakhand", "Goa", "Tripura", "Manipur", "Meghalaya", "Sikkim", "Nagaland", "Mizoram", "Arunachal Pradesh", "Jammu and Kashmir", "Ladakh"
+  ];
+
+  const programs = [
+    "Medical", "Engineering & Technology", "Dental", "Law", "Pharmacy", "Nursing", "Management", "Agriculture", "Arts & Science", "Architecture", "Physiotherapy", "Allied Health Sciences", "Design", "Education"
+  ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -125,6 +145,16 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
     setFormData({ name: "", email: "", phone: "", course: "", message: "" });
     setIsContactOpen(false);
     setIsCourseDetailOpen(false);
+  };
+
+  const handleEnquirySubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Enquiry submitted:", enquiryForm);
+    toast({
+      title: "Enquiry Submitted Successfully!",
+      description: "We'll contact you soon with more information.",
+    });
+    setEnquiryForm({ name: "", phone: "", state: "", program: "" });
   };
 
   const handleCourseClick = (course: Course) => {
@@ -185,34 +215,122 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
 
       {/* Hero Section */}
       <section 
-        className="relative py-32 bg-cover bg-center bg-no-repeat overflow-hidden"
+        className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat overflow-hidden"
         style={{
           backgroundImage: `linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(${universityData.heroImage})`
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-purple-900/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl">
-            <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm mb-8 border border-white/20">
-              <Star className="w-4 h-4 mr-2 text-yellow-400" />
-              Est. {universityData.established} • {universityData.students} Students
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="text-center lg:text-left">
+              <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm mb-8 border border-white/20">
+                <Star className="w-4 h-4 mr-2 text-yellow-400" />
+                Est. {universityData.established} • {universityData.students} Students
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
+                {universityData.name}
+              </h1>
+              <p className="text-xl md:text-2xl text-white/90 mb-10 leading-relaxed font-light">
+                {universityData.tagline || "Excellence in Education"}
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-6">
+                <Button 
+                  size="lg" 
+                  onClick={() => setIsContactOpen(true)}
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-xl px-10 py-6 rounded-xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                >
+                  Apply Now
+                  <ChevronRight className="w-6 h-6 ml-2" />
+                </Button>
+              </div>
             </div>
-            <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
-              {universityData.name}
-            </h1>
-            <p className="text-2xl md:text-3xl text-white/90 mb-10 leading-relaxed font-light">
-              {universityData.tagline}
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6">
-              <Button 
-                size="lg" 
-                onClick={() => setIsContactOpen(true)}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-xl px-10 py-6 rounded-xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-              >
-                Apply Now
-                <ChevronRight className="w-6 h-6 ml-2" />
-              </Button>
+
+            {/* Right Enquiry Form */}
+            <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 border">
+              <div className="text-center mb-6">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Get Started Today</h2>
+                <p className="text-gray-600">Submit your enquiry and we'll help you find the perfect program</p>
+              </div>
+              
+              <form onSubmit={handleEnquirySubmit} className="space-y-4">
+                <div>
+                  <Label htmlFor="enquiry-name" className="flex items-center text-sm font-medium">
+                    <User className="w-4 h-4 mr-2 text-blue-600" />
+                    Full Name *
+                  </Label>
+                  <Input
+                    id="enquiry-name"
+                    value={enquiryForm.name}
+                    onChange={(e) => setEnquiryForm({...enquiryForm, name: e.target.value})}
+                    required
+                    className="mt-1"
+                    placeholder="Enter your full name"
+                  />
+                </div>
+                
+                <div>
+                  <Label htmlFor="enquiry-phone" className="flex items-center text-sm font-medium">
+                    <Phone className="w-4 h-4 mr-2 text-green-600" />
+                    Phone Number *
+                  </Label>
+                  <Input
+                    id="enquiry-phone"
+                    value={enquiryForm.phone}
+                    onChange={(e) => setEnquiryForm({...enquiryForm, phone: e.target.value})}
+                    required
+                    className="mt-1"
+                    placeholder="Enter your phone number"
+                  />
+                </div>
+                
+                <div>
+                  <Label htmlFor="enquiry-state" className="flex items-center text-sm font-medium">
+                    <MapPin className="w-4 h-4 mr-2 text-purple-600" />
+                    State *
+                  </Label>
+                  <Select value={enquiryForm.state} onValueChange={(value) => setEnquiryForm({...enquiryForm, state: value})}>
+                    <SelectTrigger className="mt-1">
+                      <SelectValue placeholder="Select your state" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {states.map((state) => (
+                        <SelectItem key={state} value={state}>
+                          {state}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+                
+                <div>
+                  <Label htmlFor="enquiry-program" className="flex items-center text-sm font-medium">
+                    <GraduationCap className="w-4 h-4 mr-2 text-orange-600" />
+                    Program Interest *
+                  </Label>
+                  <Select value={enquiryForm.program} onValueChange={(value) => setEnquiryForm({...enquiryForm, program: value})}>
+                    <SelectTrigger className="mt-1">
+                      <SelectValue placeholder="Select program of interest" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {programs.map((program) => (
+                        <SelectItem key={program} value={program}>
+                          {program}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+                
+                <Button 
+                  type="submit" 
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 text-lg mt-6"
+                >
+                  Submit Enquiry
+                </Button>
+              </form>
             </div>
           </div>
         </div>

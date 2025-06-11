@@ -6,7 +6,7 @@ const SaveethaUniversity = () => {
   const universityData = {
     name: "Saveetha Deemed University",
     location: "Chennai, Tamil Nadu",
-    // tagline: "We built a better online through quality education",
+    tagline: "Committed to Excellence in Higher Education",
     heroImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVs0OjZjdMSOK_D8q6stw6rjfOPdnb02C7Kw&s",
     logoImage: "https://upload.wikimedia.org/wikipedia/en/2/21/Saveetha_Institute_of_Medical_And_Technical_Sciences_Logo.png",
     primaryColor: "text-red-600",

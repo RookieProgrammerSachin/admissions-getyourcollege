@@ -6,7 +6,7 @@ const BiherUniversity = () => {
   const universityData = {
     name: "Bharath Institute of Higher Education and Research",
     location: "Chennai, Tamil Nadu",
-    // tagline: "We built a better online through quality education",
+    tagline: "Nurturing Excellence in Education and Research",
     heroImage: "https://img.jagranjosh.com/images/2022/December/1122022/Bharath-Institute-of-Higher-Education-and-Research-Chennai-Campus-View-3.jpg",
     logoImage: "https://upload.wikimedia.org/wikipedia/en/c/cb/Bharath_University_Logo.png",
     primaryColor: "text-purple-600",

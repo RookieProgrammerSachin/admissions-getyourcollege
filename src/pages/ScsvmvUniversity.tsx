@@ -6,7 +6,7 @@ const ScsvmvUniversity = () => {
   const universityData = {
     name: "Sri Chandrasekharendra Saraswathi Viswa Mahavidyalaya",
     location: "Chennai, Tamil Nadu",
-    // tagline: "We built a better online through quality education",
+    tagline: "Blending Tradition with Modern Education",
     heroImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDvOBmLRcAe4nPBYeVosAKtyty4x5aqLc9Fg&s",
     logoImage: "https://upload.wikimedia.org/wikipedia/en/4/4c/Sri_Chandrasekharendra_Saraswathi_Viswa_Mahavidyalaya_logo.png",
     primaryColor: "text-orange-600",

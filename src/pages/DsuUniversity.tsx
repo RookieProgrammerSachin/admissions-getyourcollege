@@ -6,7 +6,7 @@ const DsuUniversity = () => {
   const universityData = {
     name: "Dhanalakshmi Srinivasan University",
     location: "Chennai, Tamil Nadu",
-    // tagline: "We built a better online through quality education",
+    tagline: "Innovation and Excellence in Higher Education",
     heroImage: "https://www.dsuniversity.ac.in/slider/DSU-Pic-04.jpg",
     logoImage: "https://www.dsuniversity.ac.in/images/DSU_Logo.png",
     primaryColor: "text-emerald-600",

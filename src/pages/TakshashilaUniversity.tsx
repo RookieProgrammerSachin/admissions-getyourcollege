@@ -6,7 +6,7 @@ const TakshashilaUniversity = () => {
   const universityData = {
     name: "Takshashila University",
     location: "Ongur,Tamil Nadu",
-    // tagline: "Reviving India's Ancient Educational Legacy with Modern Excellence",
+    tagline: "Reviving India's Ancient Educational Legacy with Modern Excellence",
     heroImage: "https://takshashilauniv.ac.in/wp-content/uploads/2025/03/infrastructure-2.webp",
     logoImage: "https://media.licdn.com/dms/image/v2/C4D0BAQEn2ipthDvaeA/company-logo_200_200/company-logo_200_200/0/1657190027778?e=1755129600&v=beta&t=_Wq4kB0kNAdBl3n1gMC2LupsgXRrzgfc60qQAT8TDcg",
     primaryColor: "text-red-600",

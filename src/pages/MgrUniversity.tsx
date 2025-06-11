@@ -6,7 +6,7 @@ const MgrUniversity = () => {
   const universityData = {
     name: "Dr.M.G.R.Educational and Research Institute",
     location: "Chennai, Tamil Nadu",
-    // tagline: "We built a better online through quality education",
+    tagline: "Excellence in Medical Education and Research",
     heroImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlXL8WpQPT0QRC84zDlL5rHThqw0BdhWRzWA&s",
     logoImage: "https://www.drmgrdu.ac.in/images/logo/logo_main.png",
     primaryColor: "text-blue-600",
