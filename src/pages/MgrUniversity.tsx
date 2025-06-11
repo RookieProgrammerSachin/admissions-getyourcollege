@@ -4,11 +4,11 @@ import { Award, Users, Building, Handshake } from "lucide-react";
 
 const MgrUniversity = () => {
   const universityData = {
-    name: "Tamil Nadu Dr. M.G.R. Medical University",
+    name: "Dr.M.G.R.Educational and Research Institute",
     location: "Chennai, Tamil Nadu",
-    tagline: "We built a better online through quality education",
+    // tagline: "We built a better online through quality education",
     heroImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlXL8WpQPT0QRC84zDlL5rHThqw0BdhWRzWA&s",
-    logoImage: "https://www.drmgrdu.ac.in/images/logo/footer_logo.png",
+    logoImage: "https://www.drmgrdu.ac.in/images/logo/logo_main.png",
     primaryColor: "text-blue-600",
     gradientColors: "from-blue-600 to-blue-800",
     established: "1988",

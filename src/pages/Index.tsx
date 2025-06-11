@@ -35,6 +35,12 @@ const Index = () => {
       path: "/saveetha-university",
       description: "Multidisciplinary academic excellence",
       color: "from-red-600 to-red-800"
+    },
+    {
+      name: "Takshashila University",
+      path: "/takshashila-university",
+      description: "Reviving India's ancient educational excellence",
+      color: "from-amber-600 to-amber-800"
     }
   ];
 
@@ -99,8 +105,7 @@ const Index = () => {
             {universities.map((university, index) => (
               <Card key={university.path} className="hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in">
                 <CardHeader>
-                  <div className={`h-32 bg-gradient-to-r ${university.color} rounded-lg mb-4 flex items-center justify-center`}>
-                    <Building className="h-16 w-16 text-white" />
+                  <div className={`h-32 bg-gradient-to-r ${university.color} rounded-lg mb-4`}>
                   </div>
                   <CardTitle className="text-xl">{university.name}</CardTitle>
                   <CardDescription className="text-gray-600">
