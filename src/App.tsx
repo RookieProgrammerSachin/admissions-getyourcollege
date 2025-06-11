@@ -10,6 +10,7 @@ import DsuUniversity from "./pages/DsuUniversity";
 import BiherUniversity from "./pages/BiherUniversity";
 import ScsvmvUniversity from "./pages/ScsvmvUniversity";
 import SaveethaUniversity from "./pages/SaveethaUniversity";
+import TakshashilaUniversity from "./pages/TakshashilaUniversity";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,8 @@ const App = () => (
           <Route path="/biher-university" element={<BiherUniversity />} />
           <Route path="/scsvmv-university" element={<ScsvmvUniversity />} />
           <Route path="/saveetha-university" element={<SaveethaUniversity />} />
+          <Route path="*" element={<NotFound />} />
+           <Route path="/takshashila-university" element={<TakshashilaUniversity />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
