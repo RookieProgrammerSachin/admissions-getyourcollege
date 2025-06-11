@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -109,6 +108,145 @@ const getCourseImage = (courseTitle: string): string => {
   return 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400&q=80';
 };
 
+const getDetailedCourseInfo = (courseTitle: string) => {
+  const title = courseTitle.toLowerCase();
+  
+  if (title.includes('medical') || title.includes('medicine')) {
+    return {
+      description: "Our Medical program provides comprehensive training in modern healthcare practices, combining theoretical knowledge with extensive clinical exposure. Students learn from experienced faculty and gain hands-on experience in our affiliated hospitals.",
+      highlights: [
+        "State-of-the-art medical facilities and laboratories",
+        "Clinical rotations in top hospitals",
+        "Research opportunities in medical sciences",
+        "International exposure programs",
+        "Experienced faculty with clinical expertise",
+        "Modern simulation labs for practical training"
+      ],
+      eligibility: "12th grade with PCB (Physics, Chemistry, Biology) with minimum 50% marks and qualified NEET",
+      career: ["Doctor", "Medical Researcher", "Hospital Administrator", "Public Health Specialist", "Medical Consultant"],
+      duration: "5.5 years (4.5 years + 1 year internship)"
+    };
+  }
+  
+  if (title.includes('dental')) {
+    return {
+      description: "The Dental program offers comprehensive education in oral health, dental procedures, and patient care. Our curriculum integrates modern dental technologies with traditional practices to produce skilled dental professionals.",
+      highlights: [
+        "Modern dental clinics and equipment",
+        "Hands-on clinical training",
+        "Advanced dental technology exposure",
+        "Community outreach programs",
+        "Research in oral health",
+        "Industry-standard dental laboratories"
+      ],
+      eligibility: "12th grade with PCB and qualified NEET",
+      career: ["Dentist", "Oral Surgeon", "Dental Researcher", "Dental Consultant", "Academia"],
+      duration: "5 years"
+    };
+  }
+  
+  if (title.includes('engineering') || title.includes('technology')) {
+    return {
+      description: "Our Engineering programs combine theoretical foundations with practical applications, preparing students for the evolving technological landscape. We offer specializations in various fields with industry-aligned curriculum.",
+      highlights: [
+        "Industry-standard laboratories",
+        "Project-based learning approach",
+        "Industry internships and placements",
+        "Research and innovation opportunities",
+        "Expert faculty from industry and academia",
+        "Modern computing and engineering facilities"
+      ],
+      eligibility: "12th grade with PCM (Physics, Chemistry, Mathematics) with minimum 50% marks",
+      career: ["Software Engineer", "Hardware Engineer", "Research Scientist", "Project Manager", "Entrepreneur"],
+      duration: "4 years"
+    };
+  }
+  
+  if (title.includes('law')) {
+    return {
+      description: "The Law program provides comprehensive legal education covering various aspects of jurisprudence, constitutional law, and legal practice. Students gain practical experience through moot courts and legal aid clinics.",
+      highlights: [
+        "Comprehensive legal curriculum",
+        "Moot court competitions",
+        "Legal aid clinic participation",
+        "Internships with law firms and courts",
+        "Expert faculty with legal practice experience",
+        "Extensive legal library and resources"
+      ],
+      eligibility: "12th grade from any stream with minimum 45% marks",
+      career: ["Advocate", "Legal Advisor", "Judge", "Corporate Lawyer", "Legal Researcher"],
+      duration: "5 years (integrated program)"
+    };
+  }
+  
+  if (title.includes('pharmacy')) {
+    return {
+      description: "The Pharmacy program focuses on pharmaceutical sciences, drug development, and patient care. Students learn about medication therapy, drug interactions, and pharmaceutical research.",
+      highlights: [
+        "Modern pharmaceutical laboratories",
+        "Drug development research opportunities",
+        "Clinical pharmacy training",
+        "Industry collaborations",
+        "Pharmaceutical analysis techniques",
+        "Quality assurance and control training"
+      ],
+      eligibility: "12th grade with PCM/PCB with minimum 50% marks",
+      career: ["Pharmacist", "Drug Inspector", "Pharmaceutical Researcher", "Clinical Pharmacist", "Regulatory Affairs"],
+      duration: "4 years"
+    };
+  }
+  
+  if (title.includes('nursing')) {
+    return {
+      description: "The Nursing program prepares compassionate healthcare professionals with strong clinical skills and patient care expertise. Our curriculum emphasizes both theoretical knowledge and practical training.",
+      highlights: [
+        "Clinical training in partner hospitals",
+        "Simulation labs for skill development",
+        "Community health programs",
+        "International nursing standards",
+        "Research in nursing practices",
+        "Holistic patient care approach"
+      ],
+      eligibility: "12th grade with PCB with minimum 45% marks",
+      career: ["Registered Nurse", "Nurse Practitioner", "Nursing Supervisor", "Community Health Nurse", "Nursing Educator"],
+      duration: "4 years"
+    };
+  }
+  
+  if (title.includes('management') || title.includes('business')) {
+    return {
+      description: "Our Management programs develop future business leaders with strong analytical, strategic, and leadership skills. The curriculum covers various aspects of business administration and entrepreneurship.",
+      highlights: [
+        "Case study methodology",
+        "Industry mentorship programs",
+        "Entrepreneurship development",
+        "Global business exposure",
+        "Leadership development workshops",
+        "Corporate internships and placements"
+      ],
+      eligibility: "Graduation in any discipline with minimum 50% marks",
+      career: ["Business Manager", "Consultant", "Entrepreneur", "Business Analyst", "Corporate Executive"],
+      duration: "2 years"
+    };
+  }
+  
+  // Default return for other courses
+  return {
+    description: `Comprehensive ${courseTitle} program designed to provide in-depth knowledge and practical skills in the field. Our curriculum is designed to meet industry standards and prepare students for successful careers.`,
+    highlights: [
+      "Industry-relevant curriculum",
+      "Experienced faculty members",
+      "Practical training opportunities", 
+      "Research and innovation focus",
+      "Modern infrastructure and facilities",
+      "Placement assistance and career guidance"
+    ],
+    eligibility: "As per university and regulatory body requirements",
+    career: ["Specialist", "Researcher", "Consultant", "Academia", "Industry Professional"],
+    duration: "As per program structure"
+  };
+};
+
 const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
   const [formData, setFormData] = useState({
     name: "",
@@ -158,18 +296,10 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
   };
 
   const handleCourseClick = (course: Course) => {
+    const detailedInfo = getDetailedCourseInfo(course.title);
     setSelectedCourse({
       ...course,
-      description: course.description || `Comprehensive ${course.title} program designed to provide in-depth knowledge and practical skills in the field.`,
-      highlights: course.highlights || [
-        "Industry-relevant curriculum",
-        "Experienced faculty",
-        "Practical training",
-        "Placement assistance",
-        "Modern infrastructure"
-      ],
-      eligibility: course.eligibility || "12th grade or equivalent",
-      career: course.career || ["Research", "Industry", "Academia", "Entrepreneurship"]
+      ...detailedInfo
     });
     setIsCourseDetailOpen(true);
   };
@@ -223,8 +353,8 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-purple-900/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-            <div className="text-center lg:text-left">
+            {/* Left Content - Expanded */}
+            <div className="text-center lg:text-left space-y-8">
               <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm mb-8 border border-white/20">
                 <Star className="w-4 h-4 mr-2 text-yellow-400" />
                 Est. {universityData.established} • {universityData.students} Students
@@ -232,19 +362,44 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
                 {universityData.name}
               </h1>
-              <p className="text-xl md:text-2xl text-white/90 mb-10 leading-relaxed font-light">
+              <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed font-light">
                 {universityData.tagline || "Excellence in Education"}
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-6">
-                <Button 
-                  size="lg" 
-                  onClick={() => setIsContactOpen(true)}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-xl px-10 py-6 rounded-xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-                >
-                  Apply Now
-                  <ChevronRight className="w-6 h-6 ml-2" />
-                </Button>
+              {/* Additional content to use the space efficiently */}
+              <div className="space-y-6">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="text-2xl md:text-3xl font-bold text-white mb-2">{universityData.established}</div>
+                    <div className="text-gray-300 text-sm">Established</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl md:text-3xl font-bold text-white mb-2">{universityData.students}</div>
+                    <div className="text-gray-300 text-sm">Students</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl md:text-3xl font-bold text-white mb-2">{universityData.courses.length}+</div>
+                    <div className="text-gray-300 text-sm">Programs</div>
+                  </div>
+                </div>
+                
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                  <h3 className="text-lg font-semibold text-white mb-3">Why Choose Us?</h3>
+                  <ul className="space-y-2 text-white/90">
+                    <li className="flex items-center">
+                      <Award className="w-4 h-4 mr-2 text-yellow-400" />
+                      <span className="text-sm">Top-ranked university with excellent reputation</span>
+                    </li>
+                    <li className="flex items-center">
+                      <Users className="w-4 h-4 mr-2 text-blue-400" />
+                      <span className="text-sm">Expert faculty with industry experience</span>
+                    </li>
+                    <li className="flex items-center">
+                      <Building className="w-4 h-4 mr-2 text-green-400" />
+                      <span className="text-sm">Modern infrastructure and facilities</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
@@ -344,7 +499,7 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
               <Award className="w-4 h-4 mr-2" />
               Why Choose Us
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
               Excellence in Every Aspect
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -355,12 +510,12 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {universityData.features.map((feature, index) => (
               <div key={index} className="group">
-                <div className="bg-white rounded-3xl p-10 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-3 border border-gray-100">
-                  <div className={`w-20 h-20 mx-auto mb-8 rounded-3xl flex items-center justify-center ${feature.color || 'bg-blue-100'} group-hover:scale-110 transition-transform duration-300`}>
-                    <feature.icon className={`h-10 w-10 ${index === 0 ? 'text-blue-600' : index === 1 ? 'text-green-600' : index === 2 ? 'text-orange-600' : 'text-red-600'}`} />
+                <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-3 border border-gray-100">
+                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center ${feature.color || 'bg-blue-100'} group-hover:scale-110 transition-transform duration-300`}>
+                    <feature.icon className={`h-8 w-8 ${index === 0 ? 'text-blue-600' : index === 1 ? 'text-green-600' : index === 2 ? 'text-orange-600' : 'text-red-600'}`} />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">{feature.title}</h3>
-                  <p className="text-gray-600 leading-relaxed text-center">{feature.description}</p>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 text-center">{feature.title}</h3>
+                  <p className="text-gray-600 leading-relaxed text-center text-sm">{feature.description}</p>
                 </div>
               </div>
             ))}
@@ -376,7 +531,7 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
               <BookOpen className="w-4 h-4 mr-2" />
               Academic Programs
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
               Programmes Offered
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -391,7 +546,7 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
                 className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-4 overflow-hidden border-0 shadow-lg cursor-pointer bg-gradient-to-br from-white to-gray-50"
                 onClick={() => handleCourseClick(course)}
               >
-                <div className="h-56 relative overflow-hidden">
+                <div className="h-48 relative overflow-hidden">
                   <img 
                     src={getCourseImage(course.title)} 
                     alt={course.title} 
@@ -430,30 +585,30 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
               <Building className="w-4 h-4 mr-2" />
               Our Story
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-10 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">
               About {universityData.name.split(' ').slice(-2).join(' ')}
             </h2>
             <div className="prose prose-lg text-white/90 max-w-none">
-              <p className="text-xl leading-relaxed mb-10 font-light">
+              <p className="text-xl leading-relaxed mb-8 font-light">
                 {universityData.about}
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12">
               <div className="text-center">
-                <div className="text-5xl font-bold text-white mb-3">{universityData.established}</div>
+                <div className="text-4xl font-bold text-white mb-2">{universityData.established}</div>
                 <div className="text-gray-300">Established</div>
               </div>
               <div className="text-center">
-                <div className="text-5xl font-bold text-white mb-3">{universityData.students}</div>
+                <div className="text-4xl font-bold text-white mb-2">{universityData.students}</div>
                 <div className="text-gray-300">Students</div>
               </div>
               <div className="text-center">
-                <div className="text-5xl font-bold text-white mb-3">{universityData.courses.length}+</div>
+                <div className="text-4xl font-bold text-white mb-2">{universityData.courses.length}+</div>
                 <div className="text-gray-300">Programs</div>
               </div>
               <div className="text-center">
-                <div className="text-5xl font-bold text-white mb-3">A+</div>
+                <div className="text-4xl font-bold text-white mb-2">A+</div>
                 <div className="text-gray-300">NAAC Grade</div>
               </div>
             </div>
@@ -463,51 +618,60 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
 
       {/* Course Detail Dialog */}
       <Dialog open={isCourseDetailOpen} onOpenChange={setIsCourseDetailOpen}>
-        <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+        <DialogContent className="max-w-4xl max-h-[85vh] overflow-y-auto">
           <DialogHeader>
-            <DialogTitle className="text-2xl font-bold text-gray-900 mb-2">
+            <DialogTitle className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
               {selectedCourse?.title}
             </DialogTitle>
-            <DialogDescription className="text-gray-600 text-base">
+            <DialogDescription className="text-gray-600 text-base leading-relaxed">
               {selectedCourse?.description}
             </DialogDescription>
           </DialogHeader>
           
           {selectedCourse && (
-            <div className="space-y-6 mt-6">
+            <div className="space-y-8 mt-6">
               {/* Program Highlights */}
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
                   <Star className="w-5 h-5 mr-2 text-yellow-500" />
                   Program Highlights
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {selectedCourse.highlights?.map((highlight, index) => (
-                    <div key={index} className="flex items-center space-x-2 text-gray-700">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                      <span className="text-sm">{highlight}</span>
+                    <div key={index} className="flex items-start space-x-3 text-gray-700">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm leading-relaxed">{highlight}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Additional Info */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                    <Users2 className="w-4 h-4 mr-2 text-green-500" />
+              {/* Additional Info Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                    <Users2 className="w-5 h-5 mr-2 text-blue-500" />
                     Eligibility
                   </h4>
-                  <p className="text-gray-600 text-sm">{selectedCourse.eligibility}</p>
+                  <p className="text-gray-700 text-sm leading-relaxed">{selectedCourse.eligibility}</p>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                    <Clock className="w-4 h-4 mr-2 text-orange-500" />
+                
+                <div className="bg-green-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                    <Clock className="w-5 h-5 mr-2 text-green-500" />
+                    Duration
+                  </h4>
+                  <p className="text-gray-700 text-sm leading-relaxed">{selectedCourse.duration}</p>
+                </div>
+                
+                <div className="bg-purple-50 rounded-lg p-4 md:col-span-2 lg:col-span-1">
+                  <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                    <GraduationCap className="w-5 h-5 mr-2 text-purple-500" />
                     Career Opportunities
                   </h4>
-                  <div className="flex flex-wrap gap-1">
+                  <div className="flex flex-wrap gap-2">
                     {selectedCourse.career?.map((career, index) => (
-                      <span key={index} className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full">
+                      <span key={index} className="text-xs bg-purple-100 text-purple-700 px-3 py-1 rounded-full">
                         {career}
                       </span>
                     ))}
@@ -516,17 +680,17 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 pt-4 border-t">
+              <div className="flex flex-col sm:flex-row gap-3 pt-6 border-t">
                 <Button 
                   onClick={handleApplyNow}
-                  className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium"
+                  className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium py-3"
                 >
                   Apply Now
                 </Button>
                 <Button 
                   variant="outline" 
                   onClick={() => setIsCourseDetailOpen(false)}
-                  className="flex-1"
+                  className="flex-1 py-3"
                 >
                   Close
                 </Button>
@@ -618,3 +782,5 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
 };
 
 export default UniversityLayout;
+
+}
