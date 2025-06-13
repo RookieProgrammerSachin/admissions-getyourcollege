@@ -1,62 +1,61 @@
 
-import { useState } from "react";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Building, Users, Award, BookOpen, Phone, Mail, MapPin, Globe, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Award, BookOpen, Building, Facebook, Globe, Instagram, Linkedin, Mail, MapPin, Phone, Twitter, Users } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const universities = [
+  {
+    name: "MGR University",
+    path: "/mgr-university",
+    description: "Leading institution in medical and health sciences",
+    color: "from-blue-600 to-blue-800",
+    image: "https://www.drmgrdu.ac.in/images/logo/logo_main.png",
+    heroImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlXL8WpQPT0QRC84zDlL5rHThqw0BdhWRzWA&s"
+  },
+  {
+    name: "DSU University", 
+    path: "/dsu-university",
+    description: "Innovation in technology and engineering",
+    color: "from-emerald-600 to-emerald-800",
+    image: "https://www.dsuniversity.ac.in/images/DSU_Logo.png",
+    heroImage: "https://www.dsuniversity.ac.in/slider/DSU-Pic-04.jpg"
+  },
+  {
+    name: "BIHER University",
+    path: "/biher-university", 
+    description: "Excellence in biotechnology and research",
+    color: "from-purple-600 to-purple-800",
+    image: "https://upload.wikimedia.org/wikipedia/en/c/cb/Bharath_University_Logo.png",
+    heroImage: "https://img.jagranjosh.com/images/2022/December/1122022/Bharath-Institute-of-Higher-Education-and-Research-Chennai-Campus-View-3.jpg"
+  },
+  {
+    name: "SCSVMV University",
+    path: "/scsvmv-university",
+    description: "Comprehensive education and development",
+    color: "from-orange-600 to-orange-800",
+    image: "https://upload.wikimedia.org/wikipedia/en/4/4c/Sri_Chandrasekharendra_Saraswathi_Viswa_Mahavidyalaya_logo.png",
+    heroImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDvOBmLRcAe4nPBYeVosAKtyty4x5aqLc9Fg&s"
+  },
+  {
+    name: "Saveetha University",
+    path: "/saveetha-university",
+    description: "Multidisciplinary academic excellence",
+    color: "from-red-600 to-red-800",
+    image:  "https://upload.wikimedia.org/wikipedia/en/2/21/Saveetha_Institute_of_Medical_And_Technical_Sciences_Logo.png",
+    heroImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVs0OjZjdMSOK_D8q6stw6rjfOPdnb02C7Kw&s"
+  },
+  {
+    name: "Takshashila University",
+    path: "/takshashila-university",
+    description: "Reviving India's ancient educational excellence",
+    color: "from-amber-600 to-amber-800",
+    image: "https://media.licdn.com/dms/image/v2/C4D0BAQEn2ipthDvaeA/company-logo_200_200/company-logo_200_200/0/1657190027778?e=1755129600&v=beta&t=_Wq4kB0kNAdBl3n1gMC2LupsgXRrzgfc60qQAT8TDcg",
+    heroImage:"https://takshashilauniv.ac.in/wp-content/uploads/2025/03/infrastructure-2.webp"
+  }
+];
 
 const Index = () => {
-  const universities = [
-    {
-      name: "MGR University",
-      path: "/mgr-university",
-      description: "Leading institution in medical and health sciences",
-      color: "from-blue-600 to-blue-800",
-      image: "https://www.drmgrdu.ac.in/images/logo/logo_main.png",
-      heroImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlXL8WpQPT0QRC84zDlL5rHThqw0BdhWRzWA&s"
-    },
-    {
-      name: "DSU University", 
-      path: "/dsu-university",
-      description: "Innovation in technology and engineering",
-      color: "from-emerald-600 to-emerald-800",
-      image: "https://www.dsuniversity.ac.in/images/DSU_Logo.png",
-      heroImage: "https://www.dsuniversity.ac.in/slider/DSU-Pic-04.jpg"
-    },
-    {
-      name: "BIHER University",
-      path: "/biher-university", 
-      description: "Excellence in biotechnology and research",
-      color: "from-purple-600 to-purple-800",
-      image: "https://upload.wikimedia.org/wikipedia/en/c/cb/Bharath_University_Logo.png",
-      heroImage: "https://img.jagranjosh.com/images/2022/December/1122022/Bharath-Institute-of-Higher-Education-and-Research-Chennai-Campus-View-3.jpg"
-    },
-    {
-      name: "SCSVMV University",
-      path: "/scsvmv-university",
-      description: "Comprehensive education and development",
-      color: "from-orange-600 to-orange-800",
-      image: "https://upload.wikimedia.org/wikipedia/en/4/4c/Sri_Chandrasekharendra_Saraswathi_Viswa_Mahavidyalaya_logo.png",
-      heroImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDvOBmLRcAe4nPBYeVosAKtyty4x5aqLc9Fg&s"
-    },
-    {
-      name: "Saveetha University",
-      path: "/saveetha-university",
-      description: "Multidisciplinary academic excellence",
-      color: "from-red-600 to-red-800",
-      image:  "https://upload.wikimedia.org/wikipedia/en/2/21/Saveetha_Institute_of_Medical_And_Technical_Sciences_Logo.png",
-      heroImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVs0OjZjdMSOK_D8q6stw6rjfOPdnb02C7Kw&s"
-    },
-    {
-      name: "Takshashila University",
-      path: "/takshashila-university",
-      description: "Reviving India's ancient educational excellence",
-      color: "from-amber-600 to-amber-800",
-      image: "https://media.licdn.com/dms/image/v2/C4D0BAQEn2ipthDvaeA/company-logo_200_200/company-logo_200_200/0/1657190027778?e=1755129600&v=beta&t=_Wq4kB0kNAdBl3n1gMC2LupsgXRrzgfc60qQAT8TDcg",
-      heroImage:"https://takshashilauniv.ac.in/wp-content/uploads/2025/03/infrastructure-2.webp"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
@@ -143,7 +142,7 @@ const Index = () => {
                   <CardDescription className="text-gray-600 mb-4 text-sm md:text-base">
                     {university.description}
                   </CardDescription>
-                  <Link to={university.path} className="block">
+                  <Link to={"/admissions/" + university.path} className="block">
                     <Button className="w-full hover:scale-105 transition-transform text-sm md:text-base py-2 md:py-3">
                       Explore University
                     </Button>
