@@ -548,7 +548,7 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
               >
                 <div className="h-48 relative overflow-hidden">
                   <img 
-                    src={getCourseImage(course.title)} 
+                    src={course.image || getCourseImage(course.title)} 
                     alt={course.title} 
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
                   />
@@ -683,7 +683,7 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
               <div className="flex flex-col sm:flex-row gap-3 pt-6 border-t">
                 <Button 
                   onClick={handleApplyNow}
-                  className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium py-3"
+                  className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
                 >
                   Apply Now
                 </Button>
@@ -782,5 +782,3 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
 };
 
 export default UniversityLayout;
-
-
