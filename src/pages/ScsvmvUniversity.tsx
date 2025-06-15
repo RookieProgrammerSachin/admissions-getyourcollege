@@ -41,14 +41,38 @@ const ScsvmvUniversity = () => {
       }
     ],
     courses: [
-      { title: "Ayurveda (Medical Sciences)" },
-      { title: "Engineering & Technology" },
-      { title: "Physiotherapy" },
-      { title: "Arts & Humanities (English, Tamil, Sanskrit)" },
-      { title: "Management Studies" },
-      { title: "Education (B.Ed)" },
-      { title: "Indian Culture & Philosophy" },
-      { title: "Research (M.Phil & Ph.D.)" }
+      { 
+        title: "Ayurveda (Medical Sciences)",
+        image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=400&q=80"
+      },
+      { 
+        title: "Engineering & Technology",
+        image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&q=80"
+      },
+      { 
+        title: "Physiotherapy",
+        image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80"
+      },
+      { 
+        title: "Arts & Humanities (English, Tamil, Sanskrit)",
+        image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&q=80"
+      },
+      { 
+        title: "Management Studies",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+      },
+      { 
+        title: "Education (B.Ed)",
+        image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&q=80"
+      },
+      { 
+        title: "Indian Culture & Philosophy",
+        image: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=400&q=80"
+      },
+      { 
+        title: "Research (M.Phil & Ph.D.)",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+      }
     ]
   };
 
