@@ -41,16 +41,46 @@ const SaveethaUniversity = () => {
       }
     ],
     courses: [
-      { title: "Medical" },
-      { title: "Dental Sciences" },
-      { title: "Engineering & Technology" },
-      { title: "Law" },
-      { title: "Physiotherapy" },
-      { title: "Pharmacy" },
-      { title: "Nursing" },
-      { title: "Allied Health Sciences" },
-      { title: "Management" },
-      { title: "Architecture" }
+      { 
+        title: "Medical",
+        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=80"
+      },
+      { 
+        title: "Dental Sciences",
+        image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&q=80"
+      },
+      { 
+        title: "Engineering & Technology",
+        image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&q=80"
+      },
+      { 
+        title: "Law",
+        image: "https://images.unsplash.com/photo-1505663912202-ac22d4cb3725?w=400&q=80"
+      },
+      { 
+        title: "Physiotherapy",
+        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&q=80"
+      },
+      { 
+        title: "Pharmacy",
+        image: "https://images.unsplash.com/photo-1559757145-64e4e4d0b6a0?w=400&q=80"
+      },
+      { 
+        title: "Nursing",
+        image: "https://images.unsplash.com/photo-1638202993928-7267aad84c31?w=400&q=80"
+      },
+      { 
+        title: "Allied Health Sciences",
+        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&q=80"
+      },
+      { 
+        title: "Management",
+        image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&q=80"
+      },
+      { 
+        title: "Architecture",
+        image: "https://images.unsplash.com/photo-1551038247-3d9af20df552?w=400&q=80"
+      }
     ]
   };
 

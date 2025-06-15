@@ -41,15 +41,42 @@ const TakshashilaUniversity = () => {
       }
     ],
     courses: [
-      { title: "Engineering & Technology" },
-      { title: "Pharmacy" },
-      { title: "Physiotherapy" },
-      { title: "Nursing" },
-      { title: "Agriculture" },
-      { title: "Allied Health Sciences" },
-      { title: "Art & science" },
-      { title: "Hotel Management" },
-      { title: "Business Management" }
+      { 
+        title: "Engineering & Technology",
+        image: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=400&q=80"
+      },
+      { 
+        title: "Pharmacy",
+        image: "https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=400&q=80"
+      },
+      { 
+        title: "Physiotherapy",
+        image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=400&q=80"
+      },
+      { 
+        title: "Nursing",
+        image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&q=80"
+      },
+      { 
+        title: "Agriculture",
+        image: "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=400&q=80"
+      },
+      { 
+        title: "Allied Health Sciences",
+        image: "https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?w=400&q=80"
+      },
+      { 
+        title: "Art & science",
+        image: "https://images.unsplash.com/photo-1473177104440-ffee2f376098?w=400&q=80"
+      },
+      { 
+        title: "Hotel Management",
+        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80"
+      },
+      { 
+        title: "Business Management",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+      }
     ]
   };
 

@@ -41,18 +41,54 @@ const MgrUniversity = () => {
       }
     ],
     courses: [
-      { title: "Medical" },
-      { title: "Dental" },
-      { title: "Health Science" },
-      { title: "Engineering & Technology" },
-      { title: "Law" },
-      { title: "Paramedical" },
-      { title: "Pharmacy" },
-      { title: "Nursing" },
-      { title: "Agriculture" },
-      { title: "Arts & Science" },
-      { title: "Management" },
-      { title: "Architecture" }
+      { 
+        title: "Medical",
+        image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&q=80"
+      },
+      { 
+        title: "Dental",
+        image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=400&q=80"
+      },
+      { 
+        title: "Health Science",
+        image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&q=80"
+      },
+      { 
+        title: "Engineering & Technology",
+        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80"
+      },
+      { 
+        title: "Law",
+        image: "https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=400&q=80"
+      },
+      { 
+        title: "Paramedical",
+        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&q=80"
+      },
+      { 
+        title: "Pharmacy",
+        image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=400&q=80"
+      },
+      { 
+        title: "Nursing",
+        image: "https://images.unsplash.com/photo-1612277795421-9bc7706a4a34?w=400&q=80"
+      },
+      { 
+        title: "Agriculture",
+        image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=400&q=80"
+      },
+      { 
+        title: "Arts & Science",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+      },
+      { 
+        title: "Management",
+        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&q=80"
+      },
+      { 
+        title: "Architecture",
+        image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=400&q=80"
+      }
     ]
   };
 
