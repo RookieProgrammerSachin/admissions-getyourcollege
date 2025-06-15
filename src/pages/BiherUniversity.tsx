@@ -41,17 +41,50 @@ const BiherUniversity = () => {
       }
     ],
     courses: [
-      { title: "Medicine" },
-      { title: "Dental" },
-      { title: "Engineering & Technology" },
-      { title: "Nursing" },
-      { title: "Allied Health" },
-      { title: "Law" },
-      { title: "Pharmacy" },
-      { title: "Agriculture" },
-      { title: "Arts & Humanities" },
-      { title: "Management & Commerce" },
-      { title: "Architecture & Design" }
+      { 
+        title: "Medicine",
+        image: "https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=400&q=80"
+      },
+      { 
+        title: "Dental",
+        image: "https://images.unsplash.com/photo-1609840114035-3c981a782636?w=400&q=80"
+      },
+      { 
+        title: "Engineering & Technology",
+        image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&q=80"
+      },
+      { 
+        title: "Nursing",
+        image: "https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?w=400&q=80"
+      },
+      { 
+        title: "Allied Health",
+        image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&q=80"
+      },
+      { 
+        title: "Law",
+        image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&q=80"
+      },
+      { 
+        title: "Pharmacy",
+        image: "https://images.unsplash.com/photo-1563213126-a4273aed2016?w=400&q=80"
+      },
+      { 
+        title: "Agriculture",
+        image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&q=80"
+      },
+      { 
+        title: "Arts & Humanities",
+        image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&q=80"
+      },
+      { 
+        title: "Management & Commerce",
+        image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&q=80"
+      },
+      { 
+        title: "Architecture & Design",
+        image: "https://images.unsplash.com/photo-1496307653780-42ee777d4833?w=400&q=80"
+      }
     ]
   };
 

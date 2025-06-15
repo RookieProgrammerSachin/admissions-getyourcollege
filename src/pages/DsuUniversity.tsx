@@ -41,14 +41,38 @@ const DsuUniversity = () => {
       }
     ],
     courses: [
-      { title: "Medical & Health Sciences" },
-      { title: "Engineering & Technology" },
-      { title: "Law" },
-      { title: "Physiotherapy" },
-      { title: "Pharmacy" },
-      { title: "Agriculture" },
-      { title: "Design" },
-      { title: "Management" }
+      { 
+        title: "Medical & Health Sciences",
+        image: "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?w=400&q=80"
+      },
+      { 
+        title: "Engineering & Technology",
+        image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80"
+      },
+      { 
+        title: "Law",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+      },
+      { 
+        title: "Physiotherapy",
+        image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&q=80"
+      },
+      { 
+        title: "Pharmacy",
+        image: "https://images.unsplash.com/photo-1576671081837-49000212a370?w=400&q=80"
+      },
+      { 
+        title: "Agriculture",
+        image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=400&q=80"
+      },
+      { 
+        title: "Design",
+        image: "https://images.unsplash.com/photo-1541462608143-67571c6738dd?w=400&q=80"
+      },
+      { 
+        title: "Management",
+        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&q=80"
+      }
     ]
   };
 
