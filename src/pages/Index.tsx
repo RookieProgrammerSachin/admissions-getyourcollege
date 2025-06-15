@@ -142,7 +142,7 @@ const Index = () => {
                   <CardDescription className="text-gray-600 mb-4 text-sm md:text-base">
                     {university.description}
                   </CardDescription>
-                  <Link to={"/admissions/" + university.path} className="block">
+                  <Link to={"/admissions" + university.path} className="block">
                     <Button className="w-full hover:scale-105 transition-transform text-sm md:text-base py-2 md:py-3">
                       Explore University
                     </Button>
