@@ -408,17 +408,14 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
     e.preventDefault();
     setIsSaveDisabled(true);
     try {
-      const enquirySubmitReq = await fetch(
-        "https://getyourcollege.com/api/admission-query",
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-          credentials: "include",
-          method: "POST",
+      const enquirySubmitReq = await fetch("/api/admission-query", {
+        headers: {
+          "Content-Type": "application/json",
         },
-      );
+        body: JSON.stringify(formData),
+        credentials: "include",
+        method: "POST",
+      });
       if (enquirySubmitReq.ok) {
         toast({
           title: "Application Submitted Successfully!",
@@ -453,17 +450,14 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
     console.log("Enquiry submitted:", enquiryForm);
     setIsSaveDisabled(true);
     try {
-      const enquirySubmitReq = await fetch(
-        "https://getyourcollege.com/api/admission-query",
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(enquiryForm),
-          credentials: "include",
-          method: "POST",
+      const enquirySubmitReq = await fetch("/api/admission-query", {
+        headers: {
+          "Content-Type": "application/json",
         },
-      );
+        body: JSON.stringify(enquiryForm),
+        credentials: "include",
+        method: "POST",
+      });
       if (enquirySubmitReq.ok) {
         toast({
           title: "Enquiry Submitted Successfully!",
