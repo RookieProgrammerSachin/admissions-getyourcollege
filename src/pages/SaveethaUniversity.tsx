@@ -64,17 +64,17 @@ const universityData = {
     {
       title: "Law",
       image:
-        "https://images.unsplash.com/photo-1505663912202-ac22d4cb3725?w=400&q=80",
+        "https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg",
     },
     {
       title: "Physiotherapy",
       image:
-        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&q=80",
+        "https://images.pexels.com/photos/20860586/pexels-photo-20860586.jpeg",
     },
     {
       title: "Pharmacy",
       image:
-        "https://images.unsplash.com/photo-1559757145-64e4e4d0b6a0?w=400&q=80",
+        "https://images.pexels.com/photos/9629685/pexels-photo-9629685.jpeg",
     },
     {
       title: "Nursing",
@@ -84,7 +84,7 @@ const universityData = {
     {
       title: "Allied Health Sciences",
       image:
-        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&q=80",
+        "https://images.pexels.com/photos/3938022/pexels-photo-3938022.jpeg",
     },
     {
       title: "Management",
