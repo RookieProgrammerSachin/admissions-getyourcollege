@@ -75,7 +75,7 @@ const universityData = {
     {
       title: "Paramedical",
       image:
-        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&q=80",
+        "https://cpsigovt.com/new-images/DMLT/lab%20technician%201.jpg",
     },
     {
       title: "Pharmacy",
