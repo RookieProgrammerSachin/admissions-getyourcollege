@@ -11,6 +11,8 @@ const universityData = {
   gradientColors: "from-emerald-600 to-emerald-800",
   established: "2019",
   students: "15,000+",
+  metaDescription: "Dhanalakshmi Srinivasan University (DSU) - Leading institution in Tamil Nadu with campuses in Samayapuram and Perambalur. Explore programs in medicine, engineering, agriculture, pharmacy, and more.",
+  metaKeywords: "Dhanalakshmi Srinivasan University, DSU, Tamil Nadu university, medical education, engineering college, agriculture programs, pharmacy courses, AICTE approved, UGC approved",
   about:
     "Dhanalakshmi Srinivasan University (DSU), established in 2019, is a proud initiative of the Dhanalakshmi Srinivasan Charitable and Educational Trust, founded by Dr. A. Srinivasan. With campuses in Samayapuram (Tiruchirappalli) and Perambalur, DSU brings together quality education and modern infrastructure under one roof. It's part of a well-known group that runs several colleges across Tamil Nadu in fields like medicine, engineering, agriculture, and pharmacy. Built with a vision to empower students through innovation and research, the university is approved by top bodies like AICTE, NMC, PCI, INC, and UGC, making it a trusted name in higher education.",
   features: [

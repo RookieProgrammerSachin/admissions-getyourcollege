@@ -13,6 +13,8 @@ const universityData = {
   gradientColors: "from-orange-600 to-orange-800",
   established: "1993",
   students: "12,000+",
+  metaDescription: "Sri Chandrasekharendra Saraswathi Viswa Mahavidyalaya (SCSVMV) - NAAC 'A' grade university in Kanchipuram blending traditional values with modern education. Programs in Engineering, Ayurveda, Management, and Sanskrit studies.",
+  metaKeywords: "SCSVMV, Sri Chandrasekharendra Saraswathi Viswa Mahavidyalaya, Kanchi university, Kanchipuram university, Ayurveda studies, engineering programs, Sanskrit education, traditional values, NAAC A grade",
   about:
     "Sri Chandrasekharendra Saraswathi Viswa Mahavidyalaya (SCSVMV), located in Enathur, Kanchipuram, was established in 1993 with the blessings of the revered saints of the Kanchi Kamakoti Peetham. Named after Jagadguru Chandrasekharendra Saraswathi Swamigal, the university beautifully blends traditional Indian values with modern education. Spread over a peaceful 50-acre campus, SCSVMV offers programs in Engineering, Management, Science, Sanskrit, Indian Culture, and Health Sciences. Recognized by UGC, AICTE, and accredited with a NAAC 'A' grade, the university focuses on holistic development through academics, research, and values. It provides a nurturing environment for students to grow intellectually and spiritually.",
   features: [

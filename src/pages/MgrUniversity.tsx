@@ -12,6 +12,8 @@ const universityData = {
   gradientColors: "from-blue-600 to-blue-800",
   established: "1988",
   students: "25,000+",
+  metaDescription: "Dr. M.G.R. Educational and Research Institute - A premier university in Chennai offering medical, dental, engineering, law and healthcare programs. Learn about admissions, courses, and campus facilities.",
+  metaKeywords: "Dr. M.G.R. Educational and Research Institute, MGR University, Chennai university, medical college, dental college, engineering college, healthcare education, MBBS admission, BDS admission, law school Chennai",
   about:
     "Established in 1988 by the Tmt.Kannammal Educational Trust, Dr. M.G.R. Educational and Research Institute attained deemed university status in 2003. The university emphasizes technical proficiency, confidence-building, and holistic development to prepare students for global challenges. Recognized by the University Grants Commission (UGC) and the Ministry of Human Resources Development (MHRD), it offers diverse academic programs in engineering, medical sciences, dental studies, and other disciplines, fostering a research-oriented and innovation-driven educational environment.",
   features: [

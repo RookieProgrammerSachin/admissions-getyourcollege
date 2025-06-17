@@ -13,6 +13,8 @@ const universityData = {
   gradientColors: "from-purple-600 to-purple-800",
   established: "1984",
   students: "20,000+",
+  metaDescription: "Bharath Institute of Higher Education and Research (BIHER) - Deemed university in Chennai with NAAC 'A' grade. Explore programs in medicine, dental, engineering, nursing, law, pharmacy, and more on our 305-acre campus.",
+  metaKeywords: "BIHER, Bharath Institute of Higher Education and Research, Bharath University, Chennai university, deemed university, NAAC A grade, medical college, dental college, engineering, nursing, pharmacy",
   about:
     "Bharath Institute of Higher Education and Research (BIHER), formerly known as Bharath University, was founded in 1984 by Dr. S. Jagathrakshakan under the Sri Lakshmi Ammal Educational Trust. Located in Chennai, Tamil Nadu, the university was granted deemed-to-be status in 2002. Spread across a 305-acre urban campus, BIHER offers a wide range of programs in engineering, medicine, dentistry, law, management, and sciences. Known for its commitment to excellence in education and research, the university holds an NAAC 'A' grade accreditation. With modern infrastructure and a focus on innovation, Bharath University continues to shape skilled professionals across various fields.",
   features: [

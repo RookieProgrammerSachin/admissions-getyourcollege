@@ -13,6 +13,8 @@ const universityData = {
   gradientColors: "from-red-600 to-red-800",
   established: "2022",
   students: "15,000+",
+  metaDescription: "Takshashila University in Ongur, Tamil Nadu - A modern institution with a 150-acre eco-friendly campus offering programs in engineering, pharmacy, nursing, agriculture and more. UGC-recognized under TN Private Universities Act.",
+  metaKeywords: "Takshashila University, Ongur campus, Tamil Nadu university, engineering programs, pharmacy education, nursing college, agriculture studies, hotel management, business courses, Sri Manakula Vinayagar group",
   about:
     "Takshashila University, established to revive India's ancient educational glory, is situated in Ongur, Tamil Nadu. As part of the prestigious Sri Manakula Vinayagar and Mailam Group with over 25 years of experience, it promotes academic excellence through eminent faculty, hands-on learning, and advanced research. The modern campus features advanced labs, well-equipped classrooms, a comprehensive library, and sustainability initiatives. Takshashila fosters global perspectives via international collaborations, arts, culture, scholarships, and career support services, creating a diverse and inclusive environment. Dedicated to empowering students, the university shapes future leaders, continuing its legacy of transformative education.",
   features: [

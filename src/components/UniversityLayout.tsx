@@ -33,6 +33,7 @@ import {
   Users2,
 } from "lucide-react";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 interface Course {
   title: string;
@@ -66,6 +67,8 @@ interface UniversityData {
   established: string;
   students: string;
   link?: string;
+  metaDescription?: string;
+  metaKeywords?: string;
 }
 
 interface UniversityLayoutProps {
@@ -506,6 +509,45 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+      <Helmet>
+        <title>{universityData.name} | Admissions & Programs</title>
+        <meta name="description" content={universityData.metaDescription || `Learn about ${universityData.name} in ${universityData.location}. Established in ${universityData.established} with ${universityData.students} students. Explore programs in ${universityData.courses.slice(0, 5).map(c => c.title).join(', ')} and more.`} />
+        <meta name="keywords" content={universityData.metaKeywords || `${universityData.name}, university, ${universityData.location}, admissions, ${universityData.courses.slice(0, 8).map(c => c.title).join(', ')}, education, college`} />
+        <link rel="canonical" href={window.location.href} />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={window.location.href} />
+        <meta property="og:title" content={`${universityData.name} | Admissions & Programs`} />
+        <meta property="og:description" content={universityData.metaDescription || `Learn about ${universityData.name} in ${universityData.location}. Established in ${universityData.established} with ${universityData.students} students.`} />
+        <meta property="og:image" content={universityData.heroImage} />
+        
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={window.location.href} />
+        <meta property="twitter:title" content={`${universityData.name} | Admissions & Programs`} />
+        <meta property="twitter:description" content={universityData.metaDescription || `Learn about ${universityData.name} in ${universityData.location}. Established in ${universityData.established}.`} />
+        <meta property="twitter:image" content={universityData.heroImage} />
+
+        {/* Structured Data for Educational Organization */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            "name": universityData.name,
+            "description": universityData.about,
+            "url": window.location.href,
+            "logo": universityData.logoImage,
+            "image": universityData.heroImage,
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": universityData.location
+            },
+            "foundingDate": universityData.established,
+            "numberOfStudents": universityData.students
+          })}
+        </script>
+      </Helmet>
       {/* Header */}
       <header className="sticky top-0 z-40 border-b bg-white/95 shadow-lg backdrop-blur-sm">
         <div className="sm:px-6 lg:px-8 mx-auto max-w-7xl px-4 py-4">
