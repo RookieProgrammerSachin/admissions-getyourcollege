@@ -69,7 +69,7 @@ const universityData = {
     {
       title: "Management Studies",
       image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+        "https://images.pexels.com/photos/7580998/pexels-photo-7580998.jpeg",
     },
     {
       title: "Education (B.Ed)",
@@ -84,7 +84,7 @@ const universityData = {
     {
       title: "Research (M.Phil & Ph.D.)",
       image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+        "https://images.pexels.com/photos/32526073/pexels-photo-32526073.jpeg",
     },
   ],
 };
