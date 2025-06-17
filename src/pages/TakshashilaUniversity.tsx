@@ -48,17 +48,17 @@ const universityData = {
     {
       title: "Engineering & Technology",
       image:
-        "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=400&q=80",
+        "https://www.purdueglobal.edu/blog/it/what-can-you-do-with-masters-in-it.jpg",
     },
     {
       title: "Pharmacy",
       image:
-        "https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=400&q=80",
+        "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=400&q=80",
     },
     {
       title: "Physiotherapy",
       image:
-        "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=400&q=80",
+        "https://www.essex.ac.uk/-/media/images/subject-pages/physiotherapy/ptait_20220622_0901_physiotherapy_1500x825.jpg?w=900&hash=6CDE07AEC28D5DF7932B596F6AA27854",
     },
     {
       title: "Nursing",
