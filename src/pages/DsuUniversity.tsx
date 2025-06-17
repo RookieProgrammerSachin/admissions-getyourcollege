@@ -58,7 +58,7 @@ const universityData = {
     {
       title: "Law",
       image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+        "https://images.pexels.com/photos/5668882/pexels-photo-5668882.jpeg",
     },
     {
       title: "Physiotherapy",
