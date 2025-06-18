@@ -26,7 +26,6 @@ const App = () => (
           <Route path="/admissions">
             <Route path="mgr-university" element={<MgrUniversity />} />
             <Route path="dsu-university" element={<DsuUniversity />} />
-            <Route path="biher-university" element={<BiherUniversity />} />
             <Route path="scsvmv-university" element={<ScsvmvUniversity />} />
             <Route path="saveetha-university" element={<SaveethaUniversity />} />
             <Route path="takshashila-university" element={<TakshashilaUniversity />} />
