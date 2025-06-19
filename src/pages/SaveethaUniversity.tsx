@@ -50,12 +50,12 @@ const universityData = {
     {
       title: "Computer Science Engineering",
       image:
-        "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=400&q=80",
+        "https://images.unsplash.com/photo-1662638600476-d563fffbb072?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "Mechanical Engineering",
       image:
-        "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&q=80",
+        "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "Civil Engineering",
@@ -70,7 +70,7 @@ const universityData = {
     {
       title: "Electronics & Communication Engineering",
       image:
-        "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&q=80",
+        "https://img.freepik.com/free-photo/checking-current-laptop-circuit-board_1098-13759.jpg?ga=GA1.1.1606881923.1750356179&semt=ais_hybrid&w=740",
     },
     {
       title: "Information Technology",
@@ -105,7 +105,7 @@ const universityData = {
     {
       title: "MBA - Operations Management",
       image:
-        "https://images.unsplash.com/photo-1664382953518-5ff1ea6af3c8?w=400&q=80",
+        "https://img.freepik.com/free-photo/people-office-analyzing-checking-finance-graphs_23-2150377131.jpg?ga=GA1.1.1606881923.1750356179&semt=ais_hybrid&w=740",
     },
   ],
 };
