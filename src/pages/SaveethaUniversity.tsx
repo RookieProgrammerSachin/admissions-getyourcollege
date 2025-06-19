@@ -1,10 +1,11 @@
+
 import UniversityLayout from "@/components/UniversityLayout";
 import { Award, Users, Building, Handshake } from "lucide-react";
 
 const universityData = {
-  name: "Saveetha Deemed University",
+  name: "Saveetha Engineering College",
   location: "Chennai, Tamil Nadu",
-  tagline: "Committed to Excellence in Higher Education",
+  tagline: "Excellence in Engineering and Management Education",
   heroImage:
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVs0OjZjdMSOK_D8q6stw6rjfOPdnb02C7Kw&s",
   logoImage:
@@ -13,88 +14,98 @@ const universityData = {
   gradientColors: "from-red-600 to-red-800",
   established: "1986",
   students: "15,000+",
-  metaDescription: "Saveetha Deemed University (SIMATS) - NAAC A++ accredited institution in Chennai with 15,000+ students across medical, dental, engineering, and law programs. World-class facilities on 245+ acre campus.",
-  metaKeywords: "Saveetha University, Saveetha Institute of Medical and Technical Sciences, SIMATS, NAAC A++, medical university, dental college, engineering education, healthcare programs, Chennai university, deemed university",
+  metaDescription: "Saveetha Engineering College - Premier engineering and management institution in Chennai with specializations in Computer Science, Mechanical, Civil, Electrical Engineering and MBA programs. AICTE approved with excellent placement records.",
+  metaKeywords: "Saveetha Engineering College, engineering education, MBA programs, computer science, mechanical engineering, civil engineering, electrical engineering, Chennai engineering college, AICTE approved, placement",
   about:
-    "The Saveetha Medical and Educational Trust was created in 1986 mainly to provide medical relief, to promote Education and encourage Research. The Trust started a Saveetha Dental College and established an attached General Hospital in the year 1988. Subsequently the Trust established a Nursing College, Physiotherapy College, Occupational Therapy College and an Engineering College in order to comply with our commitment and to serve the people, especially those living in Rural Village in and around Chennai and adjoining districts of Tamilnadu. To fulfil the norms of the University Grants Commission, for the purpose of obtaining 'Deemed to be University' status, Saveetha Medical and Educational Trust has sponsored another Trust (viz.) Saveetha Institute of Medical & Technical Sciences (SIMATS) in the year 2001.",
+    "Saveetha Engineering College, established under the Saveetha Educational Trust in 1986, is a premier institution dedicated to excellence in engineering and management education. Located in Chennai, the college offers undergraduate and postgraduate programs in various engineering disciplines and management studies. With state-of-the-art laboratories, experienced faculty, and strong industry partnerships, we prepare students for successful careers in engineering and business. Our focus on innovation, research, and practical learning ensures graduates are well-equipped to meet industry demands and contribute to technological advancement.",
   features: [
     {
       icon: Award,
       title: "Approvals",
       description:
-        "UGC deemed, NAAC 'A++', AICTE, INC, Nursing Council, BCI approvals",
+        "AICTE approved, NBA accredited, University grants commission recognized",
       color: "bg-blue-100",
     },
     {
       icon: Building,
       title: "Campus",
-      description: "245+ acres, 60+ lakh sq.ft build; 15k students, 5k faculty",
+      description: "Modern campus with advanced labs, workshops and research facilities",
       color: "bg-green-100",
     },
     {
       icon: Users,
       title: "Faculties",
-      description: "1,100+ PhD faculty, 1:9 student faculty ratio",
+      description: "Experienced faculty with industry expertise and research background",
       color: "bg-orange-100",
     },
     {
       icon: Handshake,
-      title: "Collaborations",
+      title: "Industry Partnerships",
       description:
-        "300 + MOUs, IPR cells, incubators, global industrial partnerships",
+        "Strong placement support with top MNCs and tech companies",
       color: "bg-red-100",
     },
   ],
   courses: [
     {
-      title: "Medical",
+      title: "Computer Science Engineering",
       image:
-        "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=80",
+        "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=400&q=80",
     },
     {
-      title: "Dental Sciences",
+      title: "Mechanical Engineering",
       image:
-        "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&q=80",
+        "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&q=80",
     },
     {
-      title: "Engineering & Technology",
+      title: "Civil Engineering",
       image:
-        "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&q=80",
+        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&q=80",
     },
     {
-      title: "Law",
+      title: "Electrical & Electronics Engineering",
       image:
-        "https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg",
+        "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400&q=80",
     },
     {
-      title: "Physiotherapy",
+      title: "Electronics & Communication Engineering",
       image:
-        "https://images.pexels.com/photos/20860586/pexels-photo-20860586.jpeg",
+        "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&q=80",
     },
     {
-      title: "Pharmacy",
+      title: "Information Technology",
       image:
-        "https://images.pexels.com/photos/9629685/pexels-photo-9629685.jpeg",
+        "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80",
     },
     {
-      title: "Nursing",
+      title: "Artificial Intelligence & Data Science",
       image:
-        "https://images.unsplash.com/photo-1638202993928-7267aad84c31?w=400&q=80",
+        "https://images.unsplash.com/photo-1555255707-c07966088b7b?w=400&q=80",
     },
     {
-      title: "Allied Health Sciences",
+      title: "Cyber Security",
       image:
-        "https://images.pexels.com/photos/3938022/pexels-photo-3938022.jpeg",
+        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&q=80",
     },
     {
-      title: "Management",
+      title: "MBA - Marketing",
       image:
-        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&q=80",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=80",
     },
     {
-      title: "Architecture",
+      title: "MBA - Finance",
       image:
-        "https://images.unsplash.com/photo-1551038247-3d9af20df552?w=400&q=80",
+        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&q=80",
+    },
+    {
+      title: "MBA - Human Resources",
+      image:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+    },
+    {
+      title: "MBA - Operations Management",
+      image:
+        "https://images.unsplash.com/photo-1664382953518-5ff1ea6af3c8?w=400&q=80",
     },
   ],
 };

@@ -369,6 +369,39 @@ const states = [
   "Ladakh",
 ];
 
+const districtsByState: Record<string, string[]> = {
+  "Tamil Nadu": [
+    "Chennai", "Coimbatore", "Madurai", "Tiruchirappalli", "Salem", "Tirunelveli", 
+    "Erode", "Vellore", "Thoothukudi", "Dindigul", "Thanjavur", "Kancheepuram",
+    "Cuddalore", "Karur", "Pudukottai", "Ramanathapuram", "Sivaganga", "Virudhunagar",
+    "Namakkal", "Dharmapuri", "Krishnagiri", "Villupuram", "Tiruvarur", "Nagapattinam",
+    "Theni", "The Nilgiris", "Perambalur", "Ariyalur", "Tirupur", "Kallakurichi",
+    "Ranipet", "Tirupathur", "Chengalpattu", "Tenkasi", "Mayiladuthurai"
+  ],
+  "Karnataka": [
+    "Bengaluru Urban", "Bengaluru Rural", "Mysuru", "Tumakuru", "Mandya", "Hassan",
+    "Shimoga", "Chitradurga", "Davangere", "Ballari", "Koppala", "Raichur", "Kalaburagi",
+    "Bidar", "Vijayapura", "Bagalkote", "Belagavi", "Dharwad", "Gadag", "Haveri",
+    "Uttara Kannada", "Udupi", "Dakshina Kannada", "Kodagu", "Chamarajanagar", "Chikkaballapura",
+    "Chikkamagaluru", "Kolar", "Yadgir"
+  ],
+  "Kerala": [
+    "Thiruvananthapuram", "Kollam", "Pathanamthitta", "Alappuzha", "Kottayam", "Idukki",
+    "Ernakulam", "Thrissur", "Palakkad", "Malappuram", "Kozhikode", "Wayanad", "Kannur", "Kasaragod"
+  ],
+  "Andhra Pradesh": [
+    "Srikakulam", "Vizianagaram", "Visakhapatnam", "East Godavari", "West Godavari", "Krishna",
+    "Guntur", "Prakasam", "Nellore", "Chittoor", "Kadapa", "Anantapur", "Kurnool"
+  ],
+  "Telangana": [
+    "Hyderabad", "Secunderabad", "Adilabad", "Komaram Bheem", "Mancherial", "Nirmal",
+    "Nizamabad", "Jagitial", "Rajanna Sircilla", "Karimnagar", "Peddapalli", "Jayashankar",
+    "Mulugu", "Bhadradri Kothagudem", "Khammam", "Suryapet", "Nalgonda", "Rangareddy",
+    "Hyderabad", "Medchal Malkajgiri", "Sangareddy", "Medak", "Kamareddy", "Mahabubnagar",
+    "Nagarkurnool", "Wanaparthy", "Jogulamba Gadwal", "Vikarabad"
+  ]
+};
+
 const programs = [
   "Medical",
   "Engineering & Technology",
@@ -399,6 +432,7 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
     name: "",
     phone: "",
     state: "",
+    district: "",
     course: "",
     college: universityData.name,
   });
@@ -470,6 +504,7 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
           name: "",
           phone: "",
           state: "",
+          district: "",
           course: "",
           college: universityData.name,
         });
@@ -484,6 +519,7 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
         name: "",
         phone: "",
         state: "",
+        district: "",
         course: "",
         college: universityData.name,
       });
@@ -724,7 +760,7 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
                   <Select
                     value={enquiryForm.state}
                     onValueChange={(value) =>
-                      setEnquiryForm({ ...enquiryForm, state: value })
+                      setEnquiryForm({ ...enquiryForm, state: value, district: "" })
                     }
                   >
                     <SelectTrigger className="mt-1">
@@ -734,6 +770,34 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
                       {states.map((state) => (
                         <SelectItem key={state} value={state}>
                           {state}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div>
+                  <Label
+                    htmlFor="enquiry-district"
+                    className="flex items-center text-sm font-medium"
+                  >
+                    <MapPin className="mr-2 h-4 w-4 text-indigo-600" />
+                    District *
+                  </Label>
+                  <Select
+                    value={enquiryForm.district}
+                    onValueChange={(value) =>
+                      setEnquiryForm({ ...enquiryForm, district: value })
+                    }
+                    disabled={!enquiryForm.state}
+                  >
+                    <SelectTrigger className="mt-1">
+                      <SelectValue placeholder={enquiryForm.state ? "Select your district" : "Select state first"} />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {enquiryForm.state && districtsByState[enquiryForm.state]?.map((district) => (
+                        <SelectItem key={district} value={district}>
+                          {district}
                         </SelectItem>
                       ))}
                     </SelectContent>
