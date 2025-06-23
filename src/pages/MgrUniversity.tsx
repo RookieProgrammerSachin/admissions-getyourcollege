@@ -1,4 +1,3 @@
-
 import UniversityLayout from "@/components/UniversityLayout";
 import { Award, Users, Building, Handshake } from "lucide-react";
 
@@ -49,9 +48,34 @@ const universityData = {
   ],
   courses: [
     {
-      title: "Engineering & Technology",
+      title: "Computer Science Engineering",
       image:
         "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80",
+    },
+    {
+      title: "Mechanical Engineering",
+      image:
+        "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=400&q=80",
+    },
+    {
+      title: "Civil Engineering",
+      image:
+        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&q=80",
+    },
+    {
+      title: "Electrical & Electronics Engineering",
+      image:
+        "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400&q=80",
+    },
+    {
+      title: "Electronics & Communication Engineering",
+      image:
+        "https://img.freepik.com/free-photo/checking-current-laptop-circuit-board_1098-13759.jpg?w=400&q=80",
+    },
+    {
+      title: "Information Technology",
+      image:
+        "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80",
     },
     {
       title: "Architecture",
