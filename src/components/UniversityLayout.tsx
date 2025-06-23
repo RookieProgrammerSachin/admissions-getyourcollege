@@ -822,9 +822,9 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
                       <SelectValue placeholder="Select program of interest" />
                     </SelectTrigger>
                     <SelectContent>
-                      {programs.map((program) => (
-                        <SelectItem key={program} value={program}>
-                          {program}
+                      {universityData.courses.map((course, index) => (
+                        <SelectItem key={index} value={course.title}>
+                          {course.title}
                         </SelectItem>
                       ))}
                     </SelectContent>
