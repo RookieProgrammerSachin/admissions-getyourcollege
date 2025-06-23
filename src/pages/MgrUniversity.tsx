@@ -1,3 +1,4 @@
+
 import UniversityLayout from "@/components/UniversityLayout";
 import { Award, Users, Building, Handshake } from "lucide-react";
 
@@ -48,9 +49,34 @@ const universityData = {
   ],
   courses: [
     {
+      title: "Engineering & Technology",
+      image:
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80",
+    },
+    {
+      title: "Architecture",
+      image:
+        "https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=400&q=80",
+    },
+    {
+      title: "Law",
+      image:
+        "https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=400&q=80",
+    },
+    {
+      title: "Management",
+      image:
+        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&q=80",
+    },
+    {
       title: "Medical",
       image:
         "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&q=80",
+    },
+    {
+      title: "Arts & Science",
+      image:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
     },
     {
       title: "Dental",
@@ -61,16 +87,6 @@ const universityData = {
       title: "Health Science",
       image:
         "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&q=80",
-    },
-    {
-      title: "Engineering & Technology",
-      image:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80",
-    },
-    {
-      title: "Law",
-      image:
-        "https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=400&q=80",
     },
     {
       title: "Paramedical",
@@ -91,21 +107,6 @@ const universityData = {
       title: "Agriculture",
       image:
         "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=400&q=80",
-    },
-    {
-      title: "Arts & Science",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
-    },
-    {
-      title: "Management",
-      image:
-        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&q=80",
-    },
-    {
-      title: "Architecture",
-      image:
-        "https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=400&q=80",
     },
   ],
 };

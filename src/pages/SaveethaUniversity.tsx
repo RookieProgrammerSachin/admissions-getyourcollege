@@ -88,24 +88,9 @@ const universityData = {
         "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&q=80",
     },
     {
-      title: "MBA - Marketing",
+      title: "MBA",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=80",
-    },
-    {
-      title: "MBA - Finance",
-      image:
-        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&q=80",
-    },
-    {
-      title: "MBA - Human Resources",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
-    },
-    {
-      title: "MBA - Operations Management",
-      image:
-        "https://img.freepik.com/free-photo/people-office-analyzing-checking-finance-graphs_23-2150377131.jpg?ga=GA1.1.1606881923.1750356179&semt=ais_hybrid&w=740",
     },
   ],
 };
