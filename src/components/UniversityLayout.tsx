@@ -844,47 +844,6 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="bg-gradient-to-br from-white to-gray-50 py-24">
-        <div className="sm:px-6 lg:px-8 mx-auto max-w-7xl px-4">
-          <div className="mb-20 text-center">
-            <div className="mb-6 inline-flex items-center rounded-full bg-blue-100 px-6 py-3 text-sm font-medium text-blue-700">
-              <Award className="mr-2 h-4 w-4" />
-              Why Choose Us
-            </div>
-            <h2 className="mb-8 text-4xl font-bold text-gray-900 md:text-5xl">
-              Excellence in Every Aspect
-            </h2>
-            <p className="mx-auto max-w-3xl text-xl leading-relaxed text-gray-600">
-              We are committed to providing quality education and fostering
-              innovation and research excellence.
-            </p>
-          </div>
-
-          <div className="lg:grid-cols-4 grid grid-cols-1 gap-8 md:grid-cols-2">
-            {universityData.features.map((feature, index) => (
-              <div key={index} className="group">
-                <div className="transform rounded-3xl border border-gray-100 bg-white p-8 shadow-lg transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl">
-                  <div
-                    className={`mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl ${feature.color || "bg-blue-100"} transition-transform duration-300 group-hover:scale-110`}
-                  >
-                    <feature.icon
-                      className={`h-8 w-8 ${index === 0 ? "text-blue-600" : index === 1 ? "text-green-600" : index === 2 ? "text-orange-600" : "text-red-600"}`}
-                    />
-                  </div>
-                  <h3 className="mb-3 text-center text-lg font-bold text-gray-900">
-                    {feature.title}
-                  </h3>
-                  <p className="text-center text-sm leading-relaxed text-gray-600">
-                    {feature.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Programmes Section */}
       <section className="bg-white py-24">
         <div className="sm:px-6 lg:px-8 mx-auto max-w-7xl px-4">
@@ -936,6 +895,47 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
                   </Button>
                 </div>
               </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="bg-gradient-to-br from-white to-gray-50 py-24">
+        <div className="sm:px-6 lg:px-8 mx-auto max-w-7xl px-4">
+          <div className="mb-20 text-center">
+            <div className="mb-6 inline-flex items-center rounded-full bg-blue-100 px-6 py-3 text-sm font-medium text-blue-700">
+              <Award className="mr-2 h-4 w-4" />
+              Why Choose Us
+            </div>
+            <h2 className="mb-8 text-4xl font-bold text-gray-900 md:text-5xl">
+              Excellence in Every Aspect
+            </h2>
+            <p className="mx-auto max-w-3xl text-xl leading-relaxed text-gray-600">
+              We are committed to providing quality education and fostering
+              innovation and research excellence.
+            </p>
+          </div>
+
+          <div className="lg:grid-cols-4 grid grid-cols-1 gap-8 md:grid-cols-2">
+            {universityData.features.map((feature, index) => (
+              <div key={index} className="group">
+                <div className="transform rounded-3xl border border-gray-100 bg-white p-8 shadow-lg transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl">
+                  <div
+                    className={`mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl ${feature.color || "bg-blue-100"} transition-transform duration-300 group-hover:scale-110`}
+                  >
+                    <feature.icon
+                      className={`h-8 w-8 ${index === 0 ? "text-blue-600" : index === 1 ? "text-green-600" : index === 2 ? "text-orange-600" : "text-red-600"}`}
+                    />
+                  </div>
+                  <h3 className="mb-3 text-center text-lg font-bold text-gray-900">
+                    {feature.title}
+                  </h3>
+                  <p className="text-center text-sm leading-relaxed text-gray-600">
+                    {feature.description}
+                  </p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
