@@ -3,7 +3,7 @@ import UniversityLayout from "@/components/UniversityLayout";
 import { Award, Users, Building, Handshake } from "lucide-react";
 
 const universityData = {
-  name: "Saveetha Engineering College",
+  name: "Saveetha University",
   location: "Chennai, Tamil Nadu",
   tagline: "Excellence in Engineering and Management Education",
   heroImage:
@@ -14,10 +14,10 @@ const universityData = {
   gradientColors: "from-red-600 to-red-800",
   established: "1986",
   students: "15,000+",
-  metaDescription: "Saveetha Engineering College - Premier engineering and management institution in Chennai with specializations in Computer Science, Mechanical, Civil, Electrical Engineering and MBA programs. AICTE approved with excellent placement records.",
-  metaKeywords: "Saveetha Engineering College, engineering education, MBA programs, computer science, mechanical engineering, civil engineering, electrical engineering, Chennai engineering college, AICTE approved, placement",
+  metaDescription: "Saveetha University - Premier engineering and management institution in Chennai with specializations in Computer Science, Mechanical, Civil, Electrical Engineering and MBA programs. AICTE approved with excellent placement records.",
+  metaKeywords: "Saveetha University, engineering education, MBA programs, computer science, mechanical engineering, civil engineering, electrical engineering, Chennai engineering college, AICTE approved, placement",
   about:
-    "Saveetha Engineering College, established under the Saveetha Educational Trust in 1986, is a premier institution dedicated to excellence in engineering and management education. Located in Chennai, the college offers undergraduate and postgraduate programs in various engineering disciplines and management studies. With state-of-the-art laboratories, experienced faculty, and strong industry partnerships, we prepare students for successful careers in engineering and business. Our focus on innovation, research, and practical learning ensures graduates are well-equipped to meet industry demands and contribute to technological advancement.",
+    "Saveetha University, established under the Saveetha Educational Trust in 1986, is a premier institution dedicated to excellence in engineering and management education. Located in Chennai, the college offers undergraduate and postgraduate programs in various engineering disciplines and management studies. With state-of-the-art laboratories, experienced faculty, and strong industry partnerships, we prepare students for successful careers in engineering and business. Our focus on innovation, research, and practical learning ensures graduates are well-equipped to meet industry demands and contribute to technological advancement.",
   features: [
     {
       icon: Award,
