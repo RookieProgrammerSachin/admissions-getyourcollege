@@ -48,44 +48,84 @@ const universityData = {
   ],
   courses: [
     {
-      title: "Computer Science Engineering",
-      image:
-        "https://images.unsplash.com/photo-1662638600476-d563fffbb072?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      title: "Mechanical Engineering",
-      image:
-        "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      title: "Civil Engineering",
-      image:
-        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&q=80",
-    },
-    {
-      title: "Electrical & Electronics Engineering",
-      image:
-        "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400&q=80",
-    },
-    {
-      title: "Electronics & Communication Engineering",
-      image:
-        "https://img.freepik.com/free-photo/checking-current-laptop-circuit-board_1098-13759.jpg?ga=GA1.1.1606881923.1750356179&semt=ais_hybrid&w=740",
-    },
-    {
-      title: "Information Technology",
-      image:
-        "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80",
-    },
-    {
-      title: "Artificial Intelligence & Data Science",
+      title: "B.Tech - Artificial Intelligence and Data Science",
       image:
         "https://images.unsplash.com/photo-1555255707-c07966088b7b?w=400&q=80",
     },
     {
-      title: "Cyber Security",
+      title: "B.Tech - Artificial Intelligence and Machine Learning",
+      image:
+        "https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=400&q=80",
+    },
+    {
+      title: "B.E - Computer Science and Engineering",
+      image:
+        "https://images.unsplash.com/photo-1662638600476-d563fffbb072?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      title: "B.Tech - Computer Science and BioSciences",
+      image:
+        "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&q=80",
+    },
+    {
+      title: "B.E - CSE with Artificial Intelligence",
+      image:
+        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80",
+    },
+    {
+      title: "B.E - CSE with Data Science",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80",
+    },
+    {
+      title: "B.E - CSE with Cyber Security Courses Offered",
       image:
         "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&q=80",
+    },
+    {
+      title: "B.Tech - Information Technology Courses Offered",
+      image:
+        "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80",
+    },
+    {
+      title: "B.E - Electronics and Communication Engineering",
+      image:
+        "https://img.freepik.com/free-photo/checking-current-laptop-circuit-board_1098-13759.jpg?ga=GA1.1.1606881923.1750356179&semt=ais_hybrid&w=740",
+    },
+    {
+      title: "B.E - Bioinformatics",
+      image:
+        "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&q=80",
+    },
+    {
+      title: "B.Tech - Biotechnology Courses Offered",
+      image:
+        "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=400&q=80",
+    },
+    {
+      title: "B.Tech - Dental Technology",
+      image:
+        "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=400&q=80",
+    },
+    {
+      title: "B.E - Electrical and Electronics Engineering",
+      image:
+        "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400&q=80",
+    },
+    {
+      title: "B.E - Civil Engineering",
+      image:
+        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&q=80",
+    },
+    {
+      title: "B.E - Mechanical Engineering",
+      image:
+        "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      title: "B.E - Biomedical Engineering",
+      image:
+        "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&q=80",
     },
     {
       title: "MBA",

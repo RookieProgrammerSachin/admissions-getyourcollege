@@ -1,3 +1,4 @@
+
 import UniversityLayout from "@/components/UniversityLayout";
 import { Award, Users, Building, Handshake } from "lucide-react";
 
@@ -48,9 +49,64 @@ const universityData = {
   ],
   courses: [
     {
-      title: "Computer Science Engineering",
+      title: "Computer Science and Engineering (Data Science & AI)",
+      image:
+        "https://images.unsplash.com/photo-1555255707-c07966088b7b?w=400&q=80",
+    },
+    {
+      title: "Computer Science and Engineering (Artificial Intelligence)",
+      image:
+        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80",
+    },
+    {
+      title: "Information Technology",
+      image:
+        "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80",
+    },
+    {
+      title: "Electrical and Electronics Engineering",
+      image:
+        "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400&q=80",
+    },
+    {
+      title: "Computer Science and Engineering (Cyber Security)",
+      image:
+        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&q=80",
+    },
+    {
+      title: "Artificial Intelligence and Machine Learning",
+      image:
+        "https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=400&q=80",
+    },
+    {
+      title: "Biotechnology",
+      image:
+        "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=400&q=80",
+    },
+    {
+      title: "Electronics and Communication Engineering",
+      image:
+        "https://img.freepik.com/free-photo/checking-current-laptop-circuit-board_1098-13759.jpg?w=400&q=80",
+    },
+    {
+      title: "Biomedical Engineering",
+      image:
+        "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&q=80",
+    },
+    {
+      title: "Computer Science and Engineering (Data Science)",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80",
+    },
+    {
+      title: "Computer Science and Engineering",
       image:
         "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80",
+    },
+    {
+      title: "Chemical Engineering",
+      image:
+        "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&q=80",
     },
     {
       title: "Mechanical Engineering",
@@ -63,22 +119,12 @@ const universityData = {
         "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&q=80",
     },
     {
-      title: "Electrical & Electronics Engineering",
+      title: "Computer Science and Engineering (Internet of Things)",
       image:
-        "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400&q=80",
+        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80",
     },
     {
-      title: "Electronics & Communication Engineering",
-      image:
-        "https://img.freepik.com/free-photo/checking-current-laptop-circuit-board_1098-13759.jpg?w=400&q=80",
-    },
-    {
-      title: "Information Technology",
-      image:
-        "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80",
-    },
-    {
-      title: "Architecture",
+      title: "Bachelor of Architecture",
       image:
         "https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=400&q=80",
     },
