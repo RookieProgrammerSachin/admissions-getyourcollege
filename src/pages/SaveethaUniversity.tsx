@@ -55,7 +55,7 @@ const universityData = {
     {
       title: "B.Tech - Artificial Intelligence and Machine Learning",
       image:
-        "https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=400&q=80",
+        "https://www.simplilearn.com/ice9/free_resources_article_thumb/How_to_Become_an_AI_Engineer.jpg",
     },
     {
       title: "B.E - Computer Science and Engineering",
