@@ -1,3 +1,4 @@
+
 import UniversityLayout from "@/components/UniversityLayout";
 import { Award, Users, Building, Handshake } from "lucide-react";
 
@@ -46,9 +47,49 @@ const universityData = {
   ],
   courses: [
     {
-      title: "Engineering & Technology",
+      title: "B.Tech CSE",
       image:
-        "https://www.purdueglobal.edu/blog/it/what-can-you-do-with-masters-in-it.jpg",
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80",
+    },
+    {
+      title: "B.Tech CSE (AI&ML)",
+      image:
+        "https://www.simplilearn.com/ice9/free_resources_article_thumb/How_to_Become_an_AI_Engineer.jpg",
+    },
+    {
+      title: "B.Tech CSE (Cyber Security)",
+      image:
+        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&q=80",
+    },
+    {
+      title: "B.Tech AI&DS",
+      image:
+        "https://images.unsplash.com/photo-1555255707-c07966088b7b?w=400&q=80",
+    },
+    {
+      title: "B.Tech CSE (Data Engineering)",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80",
+    },
+    {
+      title: "B.Tech IT",
+      image:
+        "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80",
+    },
+    {
+      title: "B.Tech ECE",
+      image:
+        "https://img.freepik.com/free-photo/checking-current-laptop-circuit-board_1098-13759.jpg?w=400&q=80",
+    },
+    {
+      title: "M.Tech Communication Systems",
+      image:
+        "https://img.freepik.com/free-photo/checking-current-laptop-circuit-board_1098-13759.jpg?w=400&q=80",
+    },
+    {
+      title: "M.Tech CSE",
+      image:
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80",
     },
     {
       title: "Pharmacy",
