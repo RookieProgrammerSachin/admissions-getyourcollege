@@ -84,12 +84,12 @@ const universityData = {
     {
       title: "M.Tech Communication Systems",
       image:
-        "https://img.freepik.com/free-photo/checking-current-laptop-circuit-board_1098-13759.jpg?w=400&q=80",
+        "https://images.unsplash.com/photo-1698668975271-2ba9a323be6b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "M.Tech CSE",
       image:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80",
+        "https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "Pharmacy",
