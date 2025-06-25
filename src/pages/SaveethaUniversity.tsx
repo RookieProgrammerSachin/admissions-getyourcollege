@@ -105,7 +105,7 @@ const universityData = {
     {
       title: "B.Tech - Dental Technology",
       image:
-        "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=400&q=80",
+        "https://dentalentrepreneur.com/wp-content/uploads/2018/11/dentist-discussing-with-patient-treatment-plan-6SMTJ5L.jpg",
     },
     {
       title: "B.E - Electrical and Electronics Engineering",
