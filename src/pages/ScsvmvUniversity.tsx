@@ -50,7 +50,7 @@ const universityData = {
     {
       title: "BE-CSE",
       image:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80",
+        "https://images.unsplash.com/photo-1592609931041-40265b692757?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "BE-CST",
@@ -70,12 +70,12 @@ const universityData = {
     {
       title: "BE EIE",
       image:
-        "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400&q=80",
+        "https://images.unsplash.com/photo-1645639417590-32e8778b2141?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "BE-EEE",
       image:
-        "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400&q=80",
+        "https://images.unsplash.com/photo-1596496181848-3091d4878b24?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "BE Mechatronics",
