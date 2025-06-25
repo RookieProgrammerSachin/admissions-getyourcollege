@@ -78,12 +78,12 @@ const universityData = {
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80",
     },
     {
-      title: "B.E - CSE with Cyber Security Courses Offered",
+      title: "B.E - CSE with Cyber Security ",
       image:
         "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&q=80",
     },
     {
-      title: "B.Tech - Information Technology Courses Offered",
+      title: "B.Tech - Information Technology ",
       image:
         "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80",
     },
@@ -98,9 +98,9 @@ const universityData = {
         "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&q=80",
     },
     {
-      title: "B.Tech - Biotechnology Courses Offered",
+      title: "B.Tech - Biotechnology ",
       image:
-        "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=400&q=80",
+        "https://www.swamivivekanandauniversity.ac.in/backend/resource/assets/images/blogs/bsc-biotechnology-colleges-near-me-08-04-2024.jpg",
     },
     {
       title: "B.Tech - Dental Technology",
