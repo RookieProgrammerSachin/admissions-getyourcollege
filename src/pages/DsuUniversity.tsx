@@ -1,3 +1,4 @@
+
 import UniversityLayout from "@/components/UniversityLayout";
 import { Award, Users, Building, Handshake } from "lucide-react";
 
@@ -46,14 +47,69 @@ const universityData = {
   ],
   courses: [
     {
+      title: "B.Tech - Artificial Intelligence & Data Science",
+      image:
+        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80",
+    },
+    {
+      title: "B.Tech - Artificial Intelligence and Machine Learning",
+      image:
+        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80",
+    },
+    {
+      title: "B.Tech - Computer Science & Engineering",
+      image:
+        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80",
+    },
+    {
+      title: "B.Tech - Computer Science & Engineering with Cyber Security",
+      image:
+        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80",
+    },
+    {
+      title: "B.Tech - Information Technology",
+      image:
+        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80",
+    },
+    {
+      title: "B.Tech - Agriculture Engineering",
+      image:
+        "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=400&q=80",
+    },
+    {
+      title: "B.Tech - Biotechnology",
+      image:
+        "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=400&q=80",
+    },
+    {
+      title: "B.Tech - Biomedical Engineering",
+      image:
+        "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&q=80",
+    },
+    {
+      title: "B.Tech - Computer Science & Engineering with IOT",
+      image:
+        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80",
+    },
+    {
+      title: "B.Tech - Electrical and Electronics Engineering",
+      image:
+        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80",
+    },
+    {
+      title: "B.Tech - Electronics and Communication Engineering",
+      image:
+        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80",
+    },
+    {
+      title: "B.Tech - Mechanical Engineering",
+      image:
+        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80",
+    },
+    {
       title: "Medical & Health Sciences",
       image:
         "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?w=400&q=80",
-    },
-    {
-      title: "Engineering & Technology",
-      image:
-        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80",
     },
     {
       title: "Law",
