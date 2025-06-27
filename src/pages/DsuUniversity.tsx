@@ -1,4 +1,5 @@
 
+
 import UniversityLayout from "@/components/UniversityLayout";
 import { Award, Users, Building, Handshake } from "lucide-react";
 
@@ -49,37 +50,37 @@ const universityData = {
     {
       title: "B.Tech - Artificial Intelligence & Data Science",
       image:
-        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80",
+        "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&q=80",
     },
     {
       title: "B.Tech - Artificial Intelligence and Machine Learning",
       image:
-        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80",
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
     },
     {
       title: "B.Tech - Computer Science & Engineering",
       image:
-        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80",
+        "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&q=80",
     },
     {
       title: "B.Tech - Computer Science & Engineering with Cyber Security",
       image:
-        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80",
+        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&q=80",
     },
     {
       title: "B.Tech - Information Technology",
       image:
-        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80",
+        "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&q=80",
     },
     {
       title: "B.Tech - Agriculture Engineering",
       image:
-        "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=400&q=80",
+        "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400&q=80",
     },
     {
       title: "B.Tech - Biotechnology",
       image:
-        "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=400&q=80",
+        "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&q=80",
     },
     {
       title: "B.Tech - Biomedical Engineering",
@@ -89,22 +90,22 @@ const universityData = {
     {
       title: "B.Tech - Computer Science & Engineering with IOT",
       image:
-        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80",
+        "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=400&q=80",
     },
     {
       title: "B.Tech - Electrical and Electronics Engineering",
       image:
-        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80",
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80",
     },
     {
       title: "B.Tech - Electronics and Communication Engineering",
       image:
-        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80",
+        "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&q=80",
     },
     {
       title: "B.Tech - Mechanical Engineering",
       image:
-        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80",
+        "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&q=80",
     },
     {
       title: "Medical & Health Sciences",
@@ -149,3 +150,4 @@ const DsuUniversity = () => {
 };
 
 export default DsuUniversity;
+
