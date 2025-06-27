@@ -50,12 +50,12 @@ const universityData = {
     {
       title: "B.Tech - Artificial Intelligence & Data Science",
       image:
-        "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&q=80",
+        "https://media.licdn.com/dms/image/v2/D5612AQFgy09hFhKGZA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1734360323373?e=2147483647&v=beta&t=Xdhh6NfoBadaQXy4sIdKqRlmdqSEuy-7dB-VTQVimzU",
     },
     {
       title: "B.Tech - Artificial Intelligence and Machine Learning",
       image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+        "https://miro.medium.com/v2/resize:fit:1400/0*aqjYal-ng3JdAuR2",
     },
     {
       title: "B.Tech - Computer Science & Engineering",
@@ -70,27 +70,27 @@ const universityData = {
     {
       title: "B.Tech - Information Technology",
       image:
-        "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&q=80",
+        "https://storage.googleapis.com/5paisa-prod-storage/files/2022-07/IT_3.jpg",
     },
     {
       title: "B.Tech - Agriculture Engineering",
       image:
-        "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400&q=80",
+        "https://www.aiet.org.in/wp-content/uploads/2023/11/image1-4.jpg",
     },
     {
       title: "B.Tech - Biotechnology",
       image:
-        "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&q=80",
+        "https://media.licdn.com/dms/image/v2/D4D12AQHRgZyqDGPLRQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1699521451896?e=2147483647&v=beta&t=xbuM8aDw3My8Tw-ns0aPX6XY46hzudWFqCsMegV9wew",
     },
     {
       title: "B.Tech - Biomedical Engineering",
       image:
-        "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&q=80",
+        "https://www.gilero.com/wp-content/uploads/2025/06/GettyImages-1193074238.jpg",
     },
     {
       title: "B.Tech - Computer Science & Engineering with IOT",
       image:
-        "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=400&q=80",
+        "https://cdn.prod.website-files.com/5f2b216ac3168956c3b5be1c/64c07f9ec46dba0d69701f93_iStock-1428908381%20(1).jpg",
     },
     {
       title: "B.Tech - Electrical and Electronics Engineering",
@@ -105,7 +105,7 @@ const universityData = {
     {
       title: "B.Tech - Mechanical Engineering",
       image:
-        "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&q=80",
+        "https://educadd.co.in/wp-content/uploads/2024/01/Manufacturing-Design.jpg",
     },
     {
       title: "Medical & Health Sciences",
