@@ -34,6 +34,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 
 interface Course {
   title: string;
@@ -371,53 +372,135 @@ const states = [
 
 const districtsByState: Record<string, string[]> = {
   "Tamil Nadu": [
-    "Chennai", "Coimbatore", "Madurai", "Tiruchirappalli", "Salem", "Tirunelveli", 
-    "Erode", "Vellore", "Thoothukudi", "Dindigul", "Thanjavur", "Kancheepuram",
-    "Cuddalore", "Karur", "Pudukottai", "Ramanathapuram", "Sivaganga", "Virudhunagar",
-    "Namakkal", "Dharmapuri", "Krishnagiri", "Villupuram", "Tiruvarur", "Nagapattinam",
-    "Theni", "The Nilgiris", "Perambalur", "Ariyalur", "Tirupur", "Kallakurichi",
-    "Ranipet", "Tirupathur", "Chengalpattu", "Tenkasi", "Mayiladuthurai"
+    "Chennai",
+    "Coimbatore",
+    "Madurai",
+    "Tiruchirappalli",
+    "Salem",
+    "Tirunelveli",
+    "Erode",
+    "Vellore",
+    "Thoothukudi",
+    "Dindigul",
+    "Thanjavur",
+    "Kancheepuram",
+    "Cuddalore",
+    "Karur",
+    "Pudukottai",
+    "Ramanathapuram",
+    "Sivaganga",
+    "Virudhunagar",
+    "Namakkal",
+    "Dharmapuri",
+    "Krishnagiri",
+    "Villupuram",
+    "Tiruvarur",
+    "Nagapattinam",
+    "Theni",
+    "The Nilgiris",
+    "Perambalur",
+    "Ariyalur",
+    "Tirupur",
+    "Kallakurichi",
+    "Ranipet",
+    "Tirupathur",
+    "Chengalpattu",
+    "Tenkasi",
+    "Mayiladuthurai",
   ],
-  "Karnataka": [
-    "Bengaluru Urban", "Bengaluru Rural", "Mysuru", "Tumakuru", "Mandya", "Hassan",
-    "Shimoga", "Chitradurga", "Davangere", "Ballari", "Koppala", "Raichur", "Kalaburagi",
-    "Bidar", "Vijayapura", "Bagalkote", "Belagavi", "Dharwad", "Gadag", "Haveri",
-    "Uttara Kannada", "Udupi", "Dakshina Kannada", "Kodagu", "Chamarajanagar", "Chikkaballapura",
-    "Chikkamagaluru", "Kolar", "Yadgir"
+  Karnataka: [
+    "Bengaluru Urban",
+    "Bengaluru Rural",
+    "Mysuru",
+    "Tumakuru",
+    "Mandya",
+    "Hassan",
+    "Shimoga",
+    "Chitradurga",
+    "Davangere",
+    "Ballari",
+    "Koppala",
+    "Raichur",
+    "Kalaburagi",
+    "Bidar",
+    "Vijayapura",
+    "Bagalkote",
+    "Belagavi",
+    "Dharwad",
+    "Gadag",
+    "Haveri",
+    "Uttara Kannada",
+    "Udupi",
+    "Dakshina Kannada",
+    "Kodagu",
+    "Chamarajanagar",
+    "Chikkaballapura",
+    "Chikkamagaluru",
+    "Kolar",
+    "Yadgir",
   ],
-  "Kerala": [
-    "Thiruvananthapuram", "Kollam", "Pathanamthitta", "Alappuzha", "Kottayam", "Idukki",
-    "Ernakulam", "Thrissur", "Palakkad", "Malappuram", "Kozhikode", "Wayanad", "Kannur", "Kasaragod"
+  Kerala: [
+    "Thiruvananthapuram",
+    "Kollam",
+    "Pathanamthitta",
+    "Alappuzha",
+    "Kottayam",
+    "Idukki",
+    "Ernakulam",
+    "Thrissur",
+    "Palakkad",
+    "Malappuram",
+    "Kozhikode",
+    "Wayanad",
+    "Kannur",
+    "Kasaragod",
   ],
   "Andhra Pradesh": [
-    "Srikakulam", "Vizianagaram", "Visakhapatnam", "East Godavari", "West Godavari", "Krishna",
-    "Guntur", "Prakasam", "Nellore", "Chittoor", "Kadapa", "Anantapur", "Kurnool"
+    "Srikakulam",
+    "Vizianagaram",
+    "Visakhapatnam",
+    "East Godavari",
+    "West Godavari",
+    "Krishna",
+    "Guntur",
+    "Prakasam",
+    "Nellore",
+    "Chittoor",
+    "Kadapa",
+    "Anantapur",
+    "Kurnool",
   ],
-  "Telangana": [
-    "Hyderabad", "Secunderabad", "Adilabad", "Komaram Bheem", "Mancherial", "Nirmal",
-    "Nizamabad", "Jagitial", "Rajanna Sircilla", "Karimnagar", "Peddapalli", "Jayashankar",
-    "Mulugu", "Bhadradri Kothagudem", "Khammam", "Suryapet", "Nalgonda", "Rangareddy",
-    "Hyderabad", "Medchal Malkajgiri", "Sangareddy", "Medak", "Kamareddy", "Mahabubnagar",
-    "Nagarkurnool", "Wanaparthy", "Jogulamba Gadwal", "Vikarabad"
-  ]
+  Telangana: [
+    "Hyderabad",
+    "Secunderabad",
+    "Adilabad",
+    "Komaram Bheem",
+    "Mancherial",
+    "Nirmal",
+    "Nizamabad",
+    "Jagitial",
+    "Rajanna Sircilla",
+    "Karimnagar",
+    "Peddapalli",
+    "Jayashankar",
+    "Mulugu",
+    "Bhadradri Kothagudem",
+    "Khammam",
+    "Suryapet",
+    "Nalgonda",
+    "Rangareddy",
+    "Hyderabad",
+    "Medchal Malkajgiri",
+    "Sangareddy",
+    "Medak",
+    "Kamareddy",
+    "Mahabubnagar",
+    "Nagarkurnool",
+    "Wanaparthy",
+    "Jogulamba Gadwal",
+    "Vikarabad",
+  ],
 };
-
-const programs = [
-  "Medical",
-  "Engineering & Technology",
-  "Dental",
-  "Law",
-  "Pharmacy",
-  "Nursing",
-  "Management",
-  "Agriculture",
-  "Arts & Science",
-  "Architecture",
-  "Physiotherapy",
-  "Allied Health Sciences",
-  "Design",
-  "Education",
-];
 
 const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
   const [formData, setFormData] = useState({
@@ -440,6 +523,7 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
   const [isSaveDisabled, setIsSaveDisabled] = useState(false);
   const [isCourseDetailOpen, setIsCourseDetailOpen] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
+  const { pathname } = useLocation();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -547,22 +631,61 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
       <Helmet>
         <title>{universityData.name} | Admissions & Programs</title>
-        <meta name="description" content={universityData.metaDescription || `Learn about ${universityData.name} in ${universityData.location}. Established in ${universityData.established} with ${universityData.students} students. Explore programs in ${universityData.courses.slice(0, 5).map(c => c.title).join(', ')} and more.`} />
-        <meta name="keywords" content={universityData.metaKeywords || `${universityData.name}, university, ${universityData.location}, admissions, ${universityData.courses.slice(0, 8).map(c => c.title).join(', ')}, education, college`} />
-        <link rel="canonical" href={window.location.href} />
-        
+        <meta
+          name="description"
+          content={
+            universityData.metaDescription ||
+            `Learn about ${universityData.name} in ${universityData.location}. Established in ${universityData.established} with ${universityData.students} students. Explore programs in ${universityData.courses
+              .slice(0, 5)
+              .map((c) => c.title)
+              .join(", ")} and more.`
+          }
+        />
+        <meta
+          name="keywords"
+          content={
+            universityData.metaKeywords ||
+            `${universityData.name}, university, ${universityData.location}, admissions, ${universityData.courses
+              .slice(0, 8)
+              .map((c) => c.title)
+              .join(", ")}, education, college`
+          }
+        />
+        <link
+          rel="canonical"
+          href={`https://www.getyourcollege.com/admissions/${pathname.split("/").at(-1)}`}
+        />
+
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={window.location.href} />
-        <meta property="og:title" content={`${universityData.name} | Admissions & Programs`} />
-        <meta property="og:description" content={universityData.metaDescription || `Learn about ${universityData.name} in ${universityData.location}. Established in ${universityData.established} with ${universityData.students} students.`} />
+        <meta
+          property="og:title"
+          content={`${universityData.name} | Admissions & Programs`}
+        />
+        <meta
+          property="og:description"
+          content={
+            universityData.metaDescription ||
+            `Learn about ${universityData.name} in ${universityData.location}. Established in ${universityData.established} with ${universityData.students} students.`
+          }
+        />
         <meta property="og:image" content={universityData.heroImage} />
-        
+
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={window.location.href} />
-        <meta property="twitter:title" content={`${universityData.name} | Admissions & Programs`} />
-        <meta property="twitter:description" content={universityData.metaDescription || `Learn about ${universityData.name} in ${universityData.location}. Established in ${universityData.established}.`} />
+        <meta
+          property="twitter:title"
+          content={`${universityData.name} | Admissions & Programs`}
+        />
+        <meta
+          property="twitter:description"
+          content={
+            universityData.metaDescription ||
+            `Learn about ${universityData.name} in ${universityData.location}. Established in ${universityData.established}.`
+          }
+        />
         <meta property="twitter:image" content={universityData.heroImage} />
 
         {/* Structured Data for Educational Organization */}
@@ -570,17 +693,17 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "EducationalOrganization",
-            "name": universityData.name,
-            "description": universityData.about,
-            "url": window.location.href,
-            "logo": universityData.logoImage,
-            "image": universityData.heroImage,
-            "address": {
+            name: universityData.name,
+            description: universityData.about,
+            url: window.location.href,
+            logo: universityData.logoImage,
+            image: universityData.heroImage,
+            address: {
               "@type": "PostalAddress",
-              "addressLocality": universityData.location
+              addressLocality: universityData.location,
             },
-            "foundingDate": universityData.established,
-            "numberOfStudents": universityData.students
+            foundingDate: universityData.established,
+            numberOfStudents: universityData.students,
           })}
         </script>
       </Helmet>
@@ -760,7 +883,11 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
                   <Select
                     value={enquiryForm.state}
                     onValueChange={(value) =>
-                      setEnquiryForm({ ...enquiryForm, state: value, district: "" })
+                      setEnquiryForm({
+                        ...enquiryForm,
+                        state: value,
+                        district: "",
+                      })
                     }
                   >
                     <SelectTrigger className="mt-1">
@@ -792,14 +919,21 @@ const UniversityLayout = ({ universityData }: UniversityLayoutProps) => {
                     disabled={!enquiryForm.state}
                   >
                     <SelectTrigger className="mt-1">
-                      <SelectValue placeholder={enquiryForm.state ? "Select your district" : "Select state first"} />
+                      <SelectValue
+                        placeholder={
+                          enquiryForm.state
+                            ? "Select your district"
+                            : "Select state first"
+                        }
+                      />
                     </SelectTrigger>
                     <SelectContent>
-                      {enquiryForm.state && districtsByState[enquiryForm.state]?.map((district) => (
-                        <SelectItem key={district} value={district}>
-                          {district}
-                        </SelectItem>
-                      ))}
+                      {enquiryForm.state &&
+                        districtsByState[enquiryForm.state]?.map((district) => (
+                          <SelectItem key={district} value={district}>
+                            {district}
+                          </SelectItem>
+                        ))}
                     </SelectContent>
                   </Select>
                 </div>
